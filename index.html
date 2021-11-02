@@ -217,6 +217,44 @@
             no este en el staging area, NO causará error.
           </p>
         </div>
+        <div class="row__item">
+          <h3>Ignorar archivos</h3>
+          <p>
+            A veces, tendrás algún tipo de archivo que no quieres que Git añada
+            automáticamente o más aun, que ni siquiera quieras que aparezca como
+            no rastreado.
+          </p>
+          <p>
+            Crear un archivo <span>.gitignore</span>, por lo general se lo crea
+            en el directorio raiz del proyecto, dentro de él especifcar los
+            archivos, patros, rutas a directorios que desea qu Git ignore.
+          </p>
+          <p>Crear archivo:<span> touch .gitignore</span></p>
+          <div>
+            <h4>Configurar archivo .gitignore</h4>
+            <ul>
+              <li>* se utiliza como una coincidencia comodín.</li>
+              <li>
+                /se usa para ignorar las rutas relativas al archivo .gitignore.
+              </li>
+              <li># utilizado para escribir un comentario</li>
+            </ul>
+            <h4>Ejemplo</h4>
+            <p># Ignorar el archivo miArchivo.txt</p>
+            <p>miArchivo.txt</p>
+            <p># Ignorar todos los archivos con extensión .txt</p>
+            <p>*.txt</p>
+          </div>
+          <div class="detalle">
+            <h4>Nota</h4>
+            <p>
+              Para que tomen efecto y Git ignore los archivos especificados en
+              el archivo .gitignore se debe primero hacer un
+              <span>git add .</span> y luego un
+              <span>git commit -m "mensaje"</span>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </body>
