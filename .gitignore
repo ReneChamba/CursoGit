@@ -1,2 +1,5 @@
 # Ignorar un archivo especifico
 ignorar.txt
+
+# Ignora todos los archivos del directorio sass
+sass/
