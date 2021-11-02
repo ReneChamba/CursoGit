@@ -3,3 +3,15 @@ ignorar.txt
 
 # Ignora todos los archivos del directorio sass
 sass/
+
+# Ignorar todos los archivo .txt dentro del subdirectorio datos
+prueba/datos/*.txt
+
+# Ignorar todos los archivo .txt dentro del directo prueba/ : esto remplaza a la anterior linea
+prueba/**/*.txt
+
+# ingnorar un arhivo directamente hijo de la raiz
+# /eliminar.txt  
+# solo ignorar el archivo eliminar.txt que este directamente debajo  de la raiz
+# si existiera otra archivo eliminar.txt pero dentro un subdirectorio, ejemplo:/datos/eliminar.txt, 
+# no tendra efecto, xq eliminar esta dentro de datos
