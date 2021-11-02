@@ -4,22 +4,128 @@
     <title>Comandos Basicos</title>
   </head>
   <body>
-    <h1>Comandos basicos de Git</h1>
-    <h2>Iniciar un repositorio</h2>
-    <p>git init namerama(por defecto es master)</p>
+    <div class="container">
+      <h1>Comandos basicos de Git</h1> 
     <div class="row">
-      <h2>Clonar un repositorio</h2>
-      <p>
-        <span>git clone url</span>: Clonar repositorio, el nombre del nuevo
-        repositorio tendra el mismo nombre que el repositorio clonado
-      </p>
-      <h2>Clonar un repositorio con nombre especifico</h2>
-      <p>
-        <span>git clone url nombreNuevoRepositorio</span>: Clonar un repositorio
-        con un nombre especifico para el nuevo repositorio.
-      </p>
+      <div class="row__item">
+        <h2>Identidad</h2>
+        <p>
+          Esto es importante porque los "commits" de Git usan esta información, y
+          es introducida de manera inmutable en los commits que envías:
+        </p>
+      </div>
+      <div class="row__item">
+        <h3>Configurar identidad de forma global</h3>
+        <p>
+          <span>git config --global user.name "Ronny"</span>: Agregar un nombre
+          global para nuestro usuario.
+        </p>
+        <p>
+          <span>git config --global user.email ronn@gmail.com</span>: Agregar
+          un email para nuestro usuario.
+        </p>
+        <div class="detalle">
+           <p>
+            En sistemas Windows, Git busca el archivo .gitconfig en el
+            directorio $HOME (para mucha gente será (C:\Users\$USER).
+          </p>
+        </div>
+      </div>
+      <div class="row__item">
+        <h3>Configurar identidad para un proyecto especifico</h3>
+        <p>
+          Simplemente omitimos --global, esto configurara un nombre y email
+          exclusivo para el repositorio actual
+        </p>
+        <p>
+          <span>git config user.name Ronny</span> : Agregar un nombre para
+          nuestro repositorio actual.
+        </p>
+        <p>
+          <span>git config user.email ronn@gmail.com</span>: Agregar un email
+          para nuestro repositorio actual.
+        </p>
+        <div class="detalle">
+          <p>
+            Estos datos se agregaran en el archivo config de nuestro repositorio
+          </p>
+        </div>
+      </div>
+    </div>  
+    
+    <div class="row">
+      <div class="row__item">
+        <h2>Comprobando tu Configuración</h2>
+        <p>
+          Si quieres comprobar tu configuración, puedes usar el comando git config
+          --list para mostrar todas las propiedades que Git ha configurado:
+        </p>
+      </div>
+      <div class="row__item">
+        <h3>Ver la configuración de git</h3>
+        <p><span>git config --list</span></p>
+      </div>
+      <div class="row__item">
+        <h3>Ver el valor de una variable de configuración</h3>
+        <p>
+          <span>git config user.name</span>: Nos imprimira el nombre de nuestro
+          usuario, donde <span>user.name</span> es una de las variable de
+          configuración
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="row__item">
+        <h2>Obtener ayuda</h2>
+        <p>
+          Si alguna vez necesitas ayuda usando Git, existen tres formas de ver la
+          página del manual (manpage) para cualquier comando de Git:
+        </p>
+        <p>
+          Cuando se instala Git, se descarga archivos de ayuda (pagina web) en
+          nuestro PC.
+        </p>
+      </div>
+      <div class="row__item">
+        <h3>Ver ayuda</h3>
+        <p>
+          <span>git help comando</span> : Nos abrirá la pagina con la
+          información del comando especificado.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="row__item">
+        <h2>Obteniendo un repositorio Git</h2>
+        <p>
+          Para iniciar un repositorio tendremo dos manera, creando un repositorio
+          vacio o clonando un repositorio desde un servidor remoto.
+        </p> 
+      </div>
+      <div class="row__item">
+        <h3>Iniciar un respositorio</h3>
+        <p>
+          <span>git init namerama(por defecto es master)</span>: Crea un
+          repositorio vacios o si existe uno ya, lo inicia de nuevo
+        </p>
+      </div>
+      <div class="row__item">
+        <h3>Clonar un repositorio</h3>
+        <p>
+          <span>git clone url</span>: Clonar repositorio, el nombre del nuevo
+          repositorio tendra el mismo nombre que el repositorio clonado.
+        </p>
+      </div>
+      <div class="row__item">
+        <h3>Clonar un repositorio con nombre especifico</h3>
+        <p>
+          <span>git clone url nombreNuevoRepositorio</span>: Clona un
+          repositorio pero el nombre del directorio destino sera igual a
+          nombreNuevoRepositorio.
+        </p>
+      </div>
       <div class="detalle">
-        <h3>Nota Importante:</h3>
+        <h4>Nota Importante:</h4>
         <p>
           Cuando clonas por primera vez un repositorio, todos tus archivos
           estarán rastreados y sin modificar pues acabas de sacarlos y aun no
@@ -28,33 +134,71 @@
       </div>
     </div>
     <div class="row">
-      <h2>Sacar un archivo de staging area</h2>
-      <p>
-        <span>git restore --staged nameArchivo</span>: En caso que el arhivos no
+      <div class="row__item">
+        <h2>Guardando cambios en el Repositorio</h2>
+        <p>
+          El siguiente paso es realizar algunos cambios y confirmar instantáneas
+          de esos cambios en el repositorio cada vez que el proyecto alcance un
+          estado que quieras conservar.
+        </p>  
+      </div>
+      <div class="row__item">
+        <h3>Ver Estados de los archivos</h3>
+        <p>
+          <span>git status </span>: La herramienta principal para determinar qué
+          archivos están en qué estado.
+        </p>
+      </div>
+      <div class="row__item">
+        <h3>Estados de los archivos</h3>
+        <p>
+          Recuerda que cada archivo de tu repositorio puede tener dos estados:
+          <span>rastreados</span> y sin <span>rastrear</span>.
+        </p>
+        <p>
+          <span>tracked files</span>: son todos aquellos archivos que estaban en
+          la última instantánea del proyecto, pueden ser archivos sin modificar,
+          modificados o preparados.
+        </p>
+        <p>
+          <span>Untracked files</span>: cualquier otro archivo en tu directorio
+          de trabajo que no estaba en tu última instantánea y que no está en el
+          área de preparación.
+        </p>
+      </div>
+      <div class="row__item">
+        <h3>Rastrear archivos nuevos</h3>
+        <p>
+          <span>git add nameArchivo</span>:Git comenzara a darle seguimiento al
+          archivo.
+        </p>
+      </div>
+      <div class="row__item">
+        <h3>Preparar Archivos Modificados</h3>
+        <p>
+          Una vez git este dando seguimiento a un archivo, Vamos a modificar un
+          archivo que esté rastreado.
+        </p>
+        <p>
+          <span>git add archivo</span>: Agregamos el archivo modificado al area
+          de preparación</p>
+        </p>
+        <p>El archivo ahora esta preparado para la proxima confirrmación</p>
+      </div>
+      <div class="row__item">
+        <h3>Dos estados de un archivo</h3>
+        <p>Supongamos que tenemos dos archivos (index.html y style.css) listos para confirmar, pero antes de la confirmacion, recordamos que tenemos que realizar un cambio en index.html. Realizamos el cambio en index.html, y sí vemos de nuevo el estado de nuestros archivos <span>(git status)</span>, podemos apreciar algo raro.</p>
+        <p>Podremos ver que el archivo index.html tiene dos estados, un estado listo para confirmar y otro estado modificado, entonces:</p>
+        <p> Si confirmas ahora, se confirmará la versión de  index.html que tenías la última vez que ejecutaste git add y no la versión que ves ahora en tu directorio de trabajo al ejecutar git status. Si modificas un archivo luego de ejecutar <span>git add</span>, deberás ejecutar <span>git add</span> de nuevo para preparar la última versión del archivo:</p>
+      </div>
+      <div class="row__item">
+        <h3>Sacar un archivo de staging area</h3>
+        <p>
+        <span>git restore --staged nameArchivo</span>:En caso que el arhivos no
         este en el staging area, NO causará error.
-      </p>
+        </p>
+      </div>
     </div>
-    <div class="row">
-      <h2>Ver Estados de los archivos</h2>
-      <p>
-        <span>git status </span>: La herramienta principal para determinar qué
-        archivos están en qué estado.
-      </p>
-    </div>
-    <div class="row">
-      <h2>Agregar un archivo al staging area</h2>
-      <p>
-        <span>git add nameArchivo</span> : Agrega un archivo al area de
-        preparación
-      </p>
-      <h2>Agregar todos los archivos al staging area</h2>
-      <p>
-        <span>git add .</span> : Agregando el punto(.) Agregará todos los
-        archivos al area de preparación.
-      </p>
-    </div>
-    <div class="row">
-      <h2>Sin especificar</h2>
-    </div>
+    </div> 
   </body>
 </html>
