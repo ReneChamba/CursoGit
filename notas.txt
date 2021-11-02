@@ -1,0 +1,6 @@
+* Estados de los archivos: Cada archivo de tu repositorio puede tener dos estados:
+tracked files(archivos restreades) y Untracked(archivos sin rastreo).
+
+* Untracked : Archivos Sin Seguimiento, Git observa que este achivo no estaba en el registro del 
+ultimo commit. Git no los incluirá en tu próximo commit
+
