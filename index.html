@@ -269,6 +269,44 @@
             </p>
           </div>
         </div>
+        <div class="row__item">
+          <h3>Ver los Cambios Preparados y No Preparados</h3>
+          <p>
+            Si el comando <span class="comando">git status</span> es muy
+            impreciso para ti - quieres ver exactamente que ha cambiado, no solo
+            cuáles archivos lo han hecho - puedes usar el comando
+            <span class="comando">git diff</span> .
+          </p>
+          <div>
+            <h4>Ver Qué has cambiado pero aun no has preparado?</h4>
+            <p>
+              <span class="comando">git diff</span> : Este comando compara lo
+              que tienes en tu directorio de trabajo con lo que está en el área
+              de preparación. El resultado te indica los cambios que has hecho
+              pero que aun no has preparado
+            </p>
+            <p>
+              <span class="comando">git diff</span> solo mostrara el archivo con
+              las modificaciones que no hay sido preparadas aun, caso contrario
+              no mostrara nada.
+            </p>
+          </div>
+          <div>
+            <h4>¿ Ver qué has preparado y está listo para confirmar?</h4>
+            <p>
+              <span class="comando"
+                >git diff --staged[--cached :son sinonimos ]</span
+              >
+              :ver lo que has preparado y será incluido en la próxima
+              confirmación.Este comando compara tus cambios preparados con la
+              última instantánea confirmada.
+            </p>
+            <p>
+              <span class="comando">git diff --staged</span> mostrara lo que has
+              preparado hasta ahora, caso contrario no mostrará nada.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </body>
