@@ -1,5 +1,6 @@
 # Ignorar un archivo especifico
 ignorar.txt
+style2.css
 
 # Ignora todos los archivos del directorio sass
 sass/
