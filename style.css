@@ -45,14 +45,17 @@ h2 {
 .row .row__item:last-child {
   margin-bottom: 0;
 }
+.row__item .head-subtitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .row__item h3 {
   font-weight: normal;
   font-size: 1.2em;
   color: royalblue;
 }
-.row__item h4 {
-  /* color: red; */
-}
+
 .row__item p {
   margin-top: 3px;
   line-height: 25px;
@@ -63,4 +66,8 @@ h2 {
 }
 .resaltado {
   font-weight: bold;
+}
+.numero-pagina {
+  font-weight: bold;
+  color: royalblue;
 }
