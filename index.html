@@ -2,422 +2,436 @@
 <html>
   <head>
     <title>Comandos Basicos</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
-      <h1>Comandos basicos de Git</h1>
-      <div class="row">
-        <div class="row__item">
-          <h2>Identidad</h2>
-          <p>
-            Esto es importante porque los "commits" de Git usan esta
-            información, y es introducida de manera inmutable en los commits que
-            envías:
-          </p>
-        </div>
-        <div class="row__item">
-          <h3>Configurar identidad de forma global</h3>
-          <p>
-            <span>git config --global user.name "Ronny"</span>: Agregar un
-            nombre global para nuestro usuario.
-          </p>
-          <p>
-            <span>git config --global user.email ronn@gmail.com</span>: Agregar
-            un email para nuestro usuario.
-          </p>
-          <div class="detalle">
+      <div class="content">
+        <h1>Comandos basicos de Git</h1>
+        <div class="row">
+          <div class="row__item">
+            <h2>Identidad</h2>
             <p>
-              En sistemas Windows, Git busca el archivo .gitconfig en el
-              directorio $HOME (para mucha gente será (C:\Users\$USER).
+              Esto es importante porque los "commits" de Git usan esta
+              información, y es introducida de manera inmutable en los commits
+              que envías:
+            </p>
+          </div>
+          <div class="row__item">
+            <h3>Configurar identidad de forma global</h3>
+            <p>
+              <span>git config --global user.name "Ronny"</span>: Agregar un
+              nombre global para nuestro usuario.
+            </p>
+            <p>
+              <span>git config --global user.email ronn@gmail.com</span>:
+              Agregar un email para nuestro usuario.
+            </p>
+            <div class="detalle">
+              <p>
+                En sistemas Windows, Git busca el archivo .gitconfig en el
+                directorio $HOME (para mucha gente será (C:\Users\$USER).
+              </p>
+            </div>
+          </div>
+          <div class="row__item">
+            <h3>Configurar identidad para un proyecto especifico</h3>
+            <p>
+              Simplemente omitimos --global, esto configurara un nombre y email
+              exclusivo para el repositorio actual
+            </p>
+            <p>
+              <span>git config user.name Ronny</span> : Agregar un nombre para
+              nuestro repositorio actual.
+            </p>
+            <p>
+              <span>git config user.email ronn@gmail.com</span>: Agregar un
+              email para nuestro repositorio actual.
+            </p>
+            <div class="detalle">
+              <p>
+                Estos datos se agregaran en el archivo config de nuestro
+                repositorio
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row__item">
+            <h2>Comprobando tu Configuración</h2>
+            <p>
+              Si quieres comprobar tu configuración, puedes usar el comando git
+              config --list para mostrar todas las propiedades que Git ha
+              configurado:
+            </p>
+          </div>
+          <div class="row__item">
+            <h3>Ver la configuración de git</h3>
+            <p><span>git config --list</span></p>
+          </div>
+          <div class="row__item">
+            <h3>Ver el valor de una variable de configuración</h3>
+            <p>
+              <span>git config user.name</span>: Nos imprimira el nombre de
+              nuestro usuario, donde <span>user.name</span> es una de las
+              variable de configuración
             </p>
           </div>
         </div>
-        <div class="row__item">
-          <h3>Configurar identidad para un proyecto especifico</h3>
-          <p>
-            Simplemente omitimos --global, esto configurara un nombre y email
-            exclusivo para el repositorio actual
-          </p>
-          <p>
-            <span>git config user.name Ronny</span> : Agregar un nombre para
-            nuestro repositorio actual.
-          </p>
-          <p>
-            <span>git config user.email ronn@gmail.com</span>: Agregar un email
-            para nuestro repositorio actual.
-          </p>
-          <div class="detalle">
+        <div class="row">
+          <div class="row__item">
+            <h2>Obtener ayuda</h2>
             <p>
-              Estos datos se agregaran en el archivo config de nuestro
-              repositorio
+              Si alguna vez necesitas ayuda usando Git, existen tres formas de
+              ver la página del manual (manpage) para cualquier comando de Git:
+            </p>
+            <p>
+              Cuando se instala Git, se descarga archivos de ayuda (pagina web)
+              en nuestro PC.
+            </p>
+          </div>
+          <div class="row__item">
+            <h3>Ver ayuda</h3>
+            <p>
+              <span>git help comando</span> : Nos abrirá la pagina con la
+              información del comando especificado.
             </p>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="row__item">
-          <h2>Comprobando tu Configuración</h2>
-          <p>
-            Si quieres comprobar tu configuración, puedes usar el comando git
-            config --list para mostrar todas las propiedades que Git ha
-            configurado:
-          </p>
-        </div>
-        <div class="row__item">
-          <h3>Ver la configuración de git</h3>
-          <p><span>git config --list</span></p>
-        </div>
-        <div class="row__item">
-          <h3>Ver el valor de una variable de configuración</h3>
-          <p>
-            <span>git config user.name</span>: Nos imprimira el nombre de
-            nuestro usuario, donde <span>user.name</span> es una de las variable
-            de configuración
-          </p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="row__item">
-          <h2>Obtener ayuda</h2>
-          <p>
-            Si alguna vez necesitas ayuda usando Git, existen tres formas de ver
-            la página del manual (manpage) para cualquier comando de Git:
-          </p>
-          <p>
-            Cuando se instala Git, se descarga archivos de ayuda (pagina web) en
-            nuestro PC.
-          </p>
-        </div>
-        <div class="row__item">
-          <h3>Ver ayuda</h3>
-          <p>
-            <span>git help comando</span> : Nos abrirá la pagina con la
-            información del comando especificado.
-          </p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="row__item">
-          <h2>Obteniendo un repositorio Git</h2>
-          <p>
-            Para iniciar un repositorio tendremo dos manera, creando un
-            repositorio vacio o clonando un repositorio desde un servidor
-            remoto.
-          </p>
-        </div>
-        <div class="row__item">
-          <h3>Iniciar un respositorio</h3>
-          <p>
-            <span>git init namerama(por defecto es master)</span>: Crea un
-            repositorio vacios o si existe uno ya, lo inicia de nuevo
-          </p>
-        </div>
-        <div class="row__item">
-          <h3>Clonar un repositorio</h3>
-          <p>
-            <span>git clone url</span>: Clonar repositorio, el nombre del nuevo
-            repositorio tendra el mismo nombre que el repositorio clonado.
-          </p>
-        </div>
-        <div class="row__item">
-          <h3>Clonar un repositorio con nombre especifico</h3>
-          <p>
-            <span>git clone url nombreNuevoRepositorio</span>: Clona un
-            repositorio pero el nombre del directorio destino sera igual a
-            nombreNuevoRepositorio.
-          </p>
-        </div>
-        <div class="detalle">
-          <h4>Nota Importante:</h4>
-          <p>
-            Cuando clonas por primera vez un repositorio, todos tus archivos
-            estarán rastreados y sin modificar pues acabas de sacarlos y aun no
-            han sido editados.
-          </p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="row__item">
-          <h2>Guardando cambios en el Repositorio</h2>
-          <p>
-            El siguiente paso es realizar algunos cambios y confirmar
-            instantáneas de esos cambios en el repositorio cada vez que el
-            proyecto alcance un estado que quieras conservar.
-          </p>
-        </div>
-        <div class="row__item">
-          <h3>Ver Estados de los archivos</h3>
-          <p>
-            <span>git status </span>: La herramienta principal para determinar
-            qué archivos están en qué estado.
-          </p>
-        </div>
-        <div class="row__item">
-          <h3>Estados de los archivos</h3>
-          <p>
-            Recuerda que cada archivo de tu repositorio puede tener dos estados:
-            <span>rastreados</span> y sin <span>rastrear</span>.
-          </p>
-          <p>
-            <span>tracked files</span>: son todos aquellos archivos que estaban
-            en la última instantánea del proyecto, pueden ser archivos sin
-            modificar, modificados o preparados.
-          </p>
-          <p>
-            <span>Untracked files</span>: cualquier otro archivo en tu
-            directorio de trabajo que no estaba en tu última instantánea y que
-            no está en el área de preparación.
-          </p>
-        </div>
-        <div class="row__item">
-          <h3>Rastrear archivos nuevos</h3>
-          <p>
-            <span>git add nameArchivo</span>:Git comenzara a darle seguimiento
-            al archivo.
-          </p>
-        </div>
-        <div class="row__item">
-          <h3>Preparar Archivos Modificados</h3>
-          <p>
-            Una vez git este dando seguimiento a un archivo, Vamos a modificar
-            un archivo que esté rastreado.
-          </p>
-          <p>
-            <span>git add archivo</span>: Agregamos el archivo modificado al
-            area de preparación
-          </p>
-          <p>El archivo ahora esta preparado para la proxima confirrmación</p>
-        </div>
-        <div class="row__item">
-          <h3>Dos estados de un archivo</h3>
-          <p>
-            Supongamos que tenemos dos archivos (index.html y style.css) listos
-            para confirmar, pero antes de la confirmacion, recordamos que
-            tenemos que realizar un cambio en index.html. Realizamos el cambio
-            en index.html, y sí vemos de nuevo el estado de nuestros archivos
-            <span>(git status)</span>, podemos apreciar algo raro.
-          </p>
-          <p>
-            Podremos ver que el archivo index.html tiene dos estados, un estado
-            listo para confirmar y otro estado modificado, entonces:
-          </p>
-          <p>
-            Si confirmas ahora, se confirmará la versión de index.html que
-            tenías la última vez que ejecutaste git add y no la versión que ves
-            ahora en tu directorio de trabajo al ejecutar git status. Si
-            modificas un archivo luego de ejecutar <span>git add</span>, deberás
-            ejecutar <span>git add</span> de nuevo para preparar la última
-            versión del archivo:
-          </p>
-        </div>
-        <div class="row__item">
-          <h3>Sacar un archivo de staging area</h3>
-          <p>
-            <span>git restore --staged nameArchivo</span>:En caso que el arhivos
-            no este en el staging area, NO causará error.
-          </p>
-        </div>
-        <div class="row__item">
-          <h3>Ignorar archivos</h3>
-          <p>
-            A veces, tendrás algún tipo de archivo que no quieres que Git añada
-            automáticamente o más aun, que ni siquiera quieras que aparezca como
-            no rastreado.
-          </p>
-          <p>
-            Crear un archivo <span>.gitignore</span>, por lo general se lo crea
-            en el directorio raiz del proyecto, dentro de él especifcar los
-            archivos, patros, rutas a directorios que desea qu Git ignore.
-          </p>
-          <p>Crear archivo:<span> touch .gitignore</span></p>
-          <div>
-            <h4>Configurar archivo .gitignore</h4>
-            <ul>
-              <li>* se utiliza como una coincidencia comodín.</li>
-              <li>
-                /se usa para ignorar las rutas relativas al archivo .gitignore.
-              </li>
-              <li># utilizado para escribir un comentario</li>
-            </ul>
-            <h4>Ejemplo 1</h4>
-            <p># Ignorar el archivo miArchivo.txt</p>
-            <p>miArchivo.txt</p>
-            <h4>Ejemplo 2</h4>
-            <p># Ignorar todos los archivos con extensión .txt</p>
-            <p>*.txt</p>
-            <h4>Ejemplo 3</h4>
-            <p># Ignorar todos los archivos del directorio sass</p>
-            <p>sass/</p>
-            <h4>Ejemplo 4</h4>
-            <p># ignora doc/notes.txt, pero no este: doc/server/arch.txt</p>
-            <p>doc/*.txt</p>
-            <h4>Ejemplo 5</h4>
-            <p># ignora un arhivo desendiente directo de la raiz</p>
+        <div class="row">
+          <div class="row__item">
+            <h2>Obteniendo un repositorio Git</h2>
             <p>
-              /ejemplo.txt : nota: si existiera otro archivo ejemplo.txt en
-              dentro de un subdirectorio, no lo tomara en cuenta ya que no hijo
-              directo.
+              Para iniciar un repositorio tendremo dos manera, creando un
+              repositorio vacio o clonando un repositorio desde un servidor
+              remoto.
+            </p>
+          </div>
+          <div class="row__item">
+            <h3>Iniciar un respositorio</h3>
+            <p>
+              <span>git init namerama(por defecto es master)</span>: Crea un
+              repositorio vacios o si existe uno ya, lo inicia de nuevo
+            </p>
+          </div>
+          <div class="row__item">
+            <h3>Clonar un repositorio</h3>
+            <p>
+              <span>git clone url</span>: Clonar repositorio, el nombre del
+              nuevo repositorio tendra el mismo nombre que el repositorio
+              clonado.
+            </p>
+          </div>
+          <div class="row__item">
+            <h3>Clonar un repositorio con nombre especifico</h3>
+            <p>
+              <span>git clone url nombreNuevoRepositorio</span>: Clona un
+              repositorio pero el nombre del directorio destino sera igual a
+              nombreNuevoRepositorio.
             </p>
           </div>
           <div class="detalle">
-            <h4>Nota</h4>
+            <h4>Nota Importante:</h4>
             <p>
-              Para que tomen efecto y Git ignore los archivos especificados en
-              el archivo .gitignore se debe primero hacer un
-              <span>git add .</span> y luego un
-              <span>git commit -m "mensaje"</span>
+              Cuando clonas por primera vez un repositorio, todos tus archivos
+              estarán rastreados y sin modificar pues acabas de sacarlos y aun
+              no han sido editados.
             </p>
           </div>
         </div>
-        <div class="row__item">
-          <h3>Ver los Cambios Preparados y No Preparados</h3>
-          <p>
-            Si el comando <span class="comando">git status</span> es muy
-            impreciso para ti - quieres ver exactamente que ha cambiado, no solo
-            cuáles archivos lo han hecho - puedes usar el comando
-            <span class="comando">git diff</span> .
-          </p>
-          <div>
-            <h4>Ver Qué has cambiado pero aun no has preparado?</h4>
+        <div class="row">
+          <div class="row__item">
+            <h2>Guardando cambios en el Repositorio</h2>
             <p>
-              <span class="comando">git diff</span> : Este comando compara lo
-              que tienes en tu directorio de trabajo con lo que está en el área
-              de preparación. El resultado te indica los cambios que has hecho
-              pero que aun no has preparado
-            </p>
-            <p>
-              <span class="comando">git diff</span> solo mostrara el archivo con
-              las modificaciones que no hay sido preparadas aun, caso contrario
-              no mostrara nada.
+              El siguiente paso es realizar algunos cambios y confirmar
+              instantáneas de esos cambios en el repositorio cada vez que el
+              proyecto alcance un estado que quieras conservar.
             </p>
           </div>
-          <div>
-            <h4>¿ Ver qué has preparado y está listo para confirmar?</h4>
+          <div class="row__item">
+            <h3>Ver Estados de los archivos</h3>
             <p>
-              <span class="comando"
-                >git diff --staged[--cached :son sinonimos ]</span
-              >
-              :ver lo que has preparado y será incluido en la próxima
-              confirmación.Este comando compara tus cambios preparados con la
-              última instantánea confirmada.
-            </p>
-            <p>
-              <span class="comando">git diff --staged</span> mostrara lo que has
-              preparado hasta ahora, caso contrario no mostrará nada.
+              <span>git status </span>: La herramienta principal para determinar
+              qué archivos están en qué estado.
             </p>
           </div>
-        </div>
-        <div class="row__item">
-          <h3>Confirmar tus Cambios <span class="numero-pagina">34</span></h3>
-          <p>
-            Recuerda que cualquier cosa que no <b>esté preparada</b> - cualquier
-            archivo que <b>hayas creado</b> o <b>modificado</b> y que no hayas
-            agregado con <span class="comando">git add</span> desde su edición -
-            <b>no será confirmado.</b> Se mantendrán como
-            <b>archivos modificados en tu disco.</b>
-          </p>
-          <p><span class="comando">git commit -m "descripcion"</span></p>
-          <p>
-            Recuerda que la confirmación
-            <span class="resaltado"
-              >guarda una instantánea de tu área de preparación.</span
-            >
-            Todo lo que no hayas preparado
-            <span class="resaltado">sigue allí modificado;</span>
-          </p>
-        </div>
-        <div class="row__item">
-          <h3>
-            Saltar el Área de Preparación<span class="numero-pagina">35</span>
-          </h3>
-          <p>
-            Si quieres saltarte el área de preparación, Git te ofrece un atajo
-            sencillo. Añadiendo la opción <span class="comando">-a</span> al
-            comando <span class="comando">git commit</span> harás que Git
-            prepare automáticamente
-            <span class="resaltado">todos los archivos rastreados</span> antes
-            de confirmarlos, ahorrándote el paso de
-            <span class="comando">git add</span>.
-          </p>
-          <p>
-            <span>git commit -am "mensaje"</span>: Fíjate que en este caso no
-            fue necesario ejecutar <span class="comando">git add </span> sobre
-            el archivo ejemplo.html antes de confirmar.
-          </p>
-          <div class="detalle">
-            <h4>Nota:</h4>
+          <div class="row__item">
+            <h3>Estados de los archivos</h3>
             <p>
-              Este combinación de comandos solo sera valido
+              Recuerda que cada archivo de tu repositorio puede tener dos
+              estados:
+              <span>rastreados</span> y sin <span>rastrear</span>.
+            </p>
+            <p>
+              <span>tracked files</span>: son todos aquellos archivos que
+              estaban en la última instantánea del proyecto, pueden ser archivos
+              sin modificar, modificados o preparados.
+            </p>
+            <p>
+              <span>Untracked files</span>: cualquier otro archivo en tu
+              directorio de trabajo que no estaba en tu última instantánea y que
+              no está en el área de preparación.
+            </p>
+          </div>
+          <div class="row__item">
+            <h3>Rastrear archivos nuevos</h3>
+            <p>
+              <span>git add nameArchivo</span>:Git comenzara a darle seguimiento
+              al archivo.
+            </p>
+          </div>
+          <div class="row__item">
+            <h3>Preparar Archivos Modificados</h3>
+            <p>
+              Una vez git este dando seguimiento a un archivo, Vamos a modificar
+              un archivo que esté rastreado.
+            </p>
+            <p>
+              <span>git add archivo</span>: Agregamos el archivo modificado al
+              area de preparación
+            </p>
+            <p>El archivo ahora esta preparado para la proxima confirrmación</p>
+          </div>
+          <div class="row__item">
+            <h3>Dos estados de un archivo</h3>
+            <p>
+              Supongamos que tenemos dos archivos (index.html y style.css)
+              listos para confirmar, pero antes de la confirmacion, recordamos
+              que tenemos que realizar un cambio en index.html. Realizamos el
+              cambio en index.html, y sí vemos de nuevo el estado de nuestros
+              archivos
+              <span>(git status)</span>, podemos apreciar algo raro.
+            </p>
+            <p>
+              Podremos ver que el archivo index.html tiene dos estados, un
+              estado listo para confirmar y otro estado modificado, entonces:
+            </p>
+            <p>
+              Si confirmas ahora, se confirmará la versión de index.html que
+              tenías la última vez que ejecutaste git add y no la versión que
+              ves ahora en tu directorio de trabajo al ejecutar git status. Si
+              modificas un archivo luego de ejecutar <span>git add</span>,
+              deberás ejecutar <span>git add</span> de nuevo para preparar la
+              última versión del archivo:
+            </p>
+          </div>
+          <div class="row__item">
+            <h3>Sacar un archivo de staging area</h3>
+            <p>
+              <span>git restore --staged nameArchivo</span>:En caso que el
+              arhivos no este en el staging area, NO causará error.
+            </p>
+          </div>
+          <div class="row__item">
+            <h3>Ignorar archivos</h3>
+            <p>
+              A veces, tendrás algún tipo de archivo que no quieres que Git
+              añada automáticamente o más aun, que ni siquiera quieras que
+              aparezca como no rastreado.
+            </p>
+            <p>
+              Crear un archivo <span>.gitignore</span>, por lo general se lo
+              crea en el directorio raiz del proyecto, dentro de él especifcar
+              los archivos, patros, rutas a directorios que desea qu Git ignore.
+            </p>
+            <p>Crear archivo:<span> touch .gitignore</span></p>
+            <div>
+              <h4>Configurar archivo .gitignore</h4>
+              <ul>
+                <li>* se utiliza como una coincidencia comodín.</li>
+                <li>
+                  /se usa para ignorar las rutas relativas al archivo
+                  .gitignore.
+                </li>
+                <li># utilizado para escribir un comentario</li>
+              </ul>
+              <h4>Ejemplo 1</h4>
+              <p># Ignorar el archivo miArchivo.txt</p>
+              <p>miArchivo.txt</p>
+              <h4>Ejemplo 2</h4>
+              <p># Ignorar todos los archivos con extensión .txt</p>
+              <p>*.txt</p>
+              <h4>Ejemplo 3</h4>
+              <p># Ignorar todos los archivos del directorio sass</p>
+              <p>sass/</p>
+              <h4>Ejemplo 4</h4>
+              <p># ignora doc/notes.txt, pero no este: doc/server/arch.txt</p>
+              <p>doc/*.txt</p>
+              <h4>Ejemplo 5</h4>
+              <p># ignora un arhivo desendiente directo de la raiz</p>
+              <p>
+                /ejemplo.txt : nota: si existiera otro archivo ejemplo.txt en
+                dentro de un subdirectorio, no lo tomara en cuenta ya que no
+                hijo directo.
+              </p>
+            </div>
+            <div class="detalle">
+              <h4>Nota</h4>
+              <p>
+                Para que tomen efecto y Git ignore los archivos especificados en
+                el archivo .gitignore se debe primero hacer un
+                <span>git add .</span> y luego un
+                <span>git commit -m "mensaje"</span>
+              </p>
+            </div>
+          </div>
+          <div class="row__item">
+            <h3>Ver los Cambios Preparados y No Preparados</h3>
+            <p>
+              Si el comando <span class="comando">git status</span> es muy
+              impreciso para ti - quieres ver exactamente que ha cambiado, no
+              solo cuáles archivos lo han hecho - puedes usar el comando
+              <span class="comando">git diff</span> .
+            </p>
+            <div>
+              <h4>Ver Qué has cambiado pero aun no has preparado?</h4>
+              <p>
+                <span class="comando">git diff</span> : Este comando compara lo
+                que tienes en tu directorio de trabajo con lo que está en el
+                área de preparación. El resultado te indica los cambios que has
+                hecho pero que aun no has preparado
+              </p>
+              <p>
+                <span class="comando">git diff</span> solo mostrara el archivo
+                con las modificaciones que no hay sido preparadas aun, caso
+                contrario no mostrara nada.
+              </p>
+            </div>
+            <div>
+              <h4>¿ Ver qué has preparado y está listo para confirmar?</h4>
+              <p>
+                <span class="comando"
+                  >git diff --staged[--cached :son sinonimos ]</span
+                >
+                :ver lo que has preparado y será incluido en la próxima
+                confirmación.Este comando compara tus cambios preparados con la
+                última instantánea confirmada.
+              </p>
+              <p>
+                <span class="comando">git diff --staged</span> mostrara lo que
+                has preparado hasta ahora, caso contrario no mostrará nada.
+              </p>
+            </div>
+          </div>
+          <div class="row__item">
+            <h3>Confirmar tus Cambios <span class="numero-pagina">34</span></h3>
+            <p>
+              Recuerda que cualquier cosa que no <b>esté preparada</b> -
+              cualquier archivo que <b>hayas creado</b> o <b>modificado</b> y
+              que no hayas agregado con
+              <span class="comando">git add</span> desde su edición -
+              <b>no será confirmado.</b> Se mantendrán como
+              <b>archivos modificados en tu disco.</b>
+            </p>
+            <p><span class="comando">git commit -m "descripcion"</span></p>
+            <p>
+              Recuerda que la confirmación
               <span class="resaltado"
-                >para los archivos qu tenga seguimiento.</span
+                >guarda una instantánea de tu área de preparación.</span
               >
+              Todo lo que no hayas preparado
+              <span class="resaltado">sigue allí modificado;</span>
             </p>
           </div>
-        </div>
-        <div class="row__item">
-          <h3>Eliminar Archivos <span class="numero-pagina"></span>36</h3>
-          <div>
-            <h4>
-              Caso 1: Eliminar el seguimiento de archivos que sólo están en
-              staging area
-              <span class="comando"> (no se ha hecho ningun commit aun )</span>
-            </h4>
+          <div class="row__item">
+            <h3>
+              Saltar el Área de Preparación<span class="numero-pagina">35</span>
+            </h3>
             <p>
-              <span class="comando">git reset HEAD archivo</span>: Con esto git
-              dejara de dar seguimiento al archivo.
+              Si quieres saltarte el área de preparación, Git te ofrece un atajo
+              sencillo. Añadiendo la opción <span class="comando">-a</span> al
+              comando <span class="comando">git commit</span> harás que Git
+              prepare automáticamente
+              <span class="resaltado">todos los archivos rastreados</span> antes
+              de confirmarlos, ahorrándote el paso de
+              <span class="comando">git add</span>.
             </p>
             <p>
-              <span class="comando">git reset HEAD</span>: Con esto git dejara
-              de dar seguimiento a todos los archivos de la rama actual.
+              <span>git commit -am "mensaje"</span>: Fíjate que en este caso no
+              fue necesario ejecutar <span class="comando">git add </span> sobre
+              el archivo ejemplo.html antes de confirmar.
             </p>
+            <div class="detalle">
+              <h4>Nota:</h4>
+              <p>
+                Este combinación de comandos solo sera valido
+                <span class="resaltado"
+                  >para los archivos qu tenga seguimiento.</span
+                >
+              </p>
+            </div>
           </div>
-          <div>
-            <h4>
-              Caso 2: Eliminar del repositorio archivos que ya se han confirmado
-              <span> (se ha hecho commit)</span>
-            </h4>
-            <p>
-              Una vez confirmados los cambios, es decir, una vez has hecho
-              commit a esos archivos por primera vez, los archivos ya forman
-              parte del repositorio y sacarlos de allí requiere algún paso
-              adicional. Pero es posible gracias a la instrucción
-              <span class="comando">rm</span>, opciones:
-            </p>
+          <div class="row__item">
+            <h3>Eliminar Archivos <span class="numero-pagina"></span>36</h3>
+            <div>
+              <h4>
+                Caso 1: Eliminar el seguimiento de archivos que sólo están en
+                staging area
+                <span class="comando">
+                  (no se ha hecho ningun commit aun )</span
+                >
+              </h4>
+              <p>
+                <span class="comando">git reset HEAD archivo</span>: Con esto
+                git dejara de dar seguimiento al archivo.
+              </p>
+              <p>
+                <span class="comando">git reset HEAD</span>: Con esto git dejara
+                de dar seguimiento a todos los archivos de la rama actual.
+              </p>
+            </div>
+            <div>
+              <h4>
+                Caso 2: Eliminar del repositorio archivos que ya se han
+                confirmado
+                <span> (se ha hecho commit)</span>
+              </h4>
+              <p>
+                Una vez confirmados los cambios, es decir, una vez has hecho
+                commit a esos archivos por primera vez, los archivos ya forman
+                parte del repositorio y sacarlos de allí requiere algún paso
+                adicional. Pero es posible gracias a la instrucción
+                <span class="comando">rm</span>, opciones:
+              </p>
 
-            <p>
-              <span class="comando">git rm arhivo</span>:
-              <span class="resaltado">Cuidado</span> este comando elimina el
-              arhivo de repositorio Git pero además lo elimina de nuestro
-              <span class="comando">Directorio de Trabajo</span>, osea de
-              nuestro proyecto.
-            </p>
-            <p>
-              <span class="comando">git rm --cached archivo </span> : Elimina el
-              archivo de repositorio pero el archivo aún permanecera en nuestro
-              <span class="comando">Directorio de Trabajo</span>, osea aún
-              estara en nuestro proyecto.
-            </p>
-            <p>
-              <span class="comando">git rm -r --cached nombreDirectorio </span>
-              : Borrar un directorio y todos sus contenidos, eso archivos aun
-              permaneceran en nuestro
-              <span class="comando">Directorio de Trabajo</span>, osea aún
-              estara en nuestro proyecto.
-            </p>
+              <p>
+                <span class="comando">git rm arhivo</span>:
+                <span class="resaltado">Cuidado</span> este comando elimina el
+                arhivo de repositorio Git pero además lo elimina de nuestro
+                <span class="comando">Directorio de Trabajo</span>, osea de
+                nuestro proyecto.
+              </p>
+              <p>
+                <span class="comando">git rm --cached archivo </span> : Elimina
+                el archivo de repositorio pero el archivo aún permanecera en
+                nuestro <span class="comando">Directorio de Trabajo</span>, osea
+                aún estara en nuestro proyecto.
+              </p>
+              <p>
+                <span class="comando"
+                  >git rm -r --cached nombreDirectorio
+                </span>
+                : Borrar un directorio y todos sus contenidos, eso archivos aun
+                permaneceran en nuestro
+                <span class="comando">Directorio de Trabajo</span>, osea aún
+                estara en nuestro proyecto.
+              </p>
 
-            <p>
-              Luego de eliminar los archivos del repositorio de Git,estos se
-              marcaran como archivos sin seguimiento
-              <span class="resaltado">(Untracked)</span>, posterior tendras que
-              asegurarte de que sean ignorados en el archivo
-              <span class="comando">.gitignore</span> para que deje de aparecer
-              como archivo <span class="resaltado">sin seguimiento.</span> y
-              para que no los volvamos a meter en el repositorio cuando
-              confirmemos cambios más adelante con commit,
-              <span class="comando"
-                >Luego hacer commit para confirmas los cambios</span
-              >
-            </p>
+              <p>
+                Luego de eliminar los archivos del repositorio de Git,estos se
+                marcaran como archivos sin seguimiento
+                <span class="resaltado">(Untracked)</span>, posterior tendras
+                que asegurarte de que sean ignorados en el archivo
+                <span class="comando">.gitignore</span> para que deje de
+                aparecer como archivo
+                <span class="resaltado">sin seguimiento.</span> y para que no
+                los volvamos a meter en el repositorio cuando confirmemos
+                cambios más adelante con commit,
+                <span class="comando"
+                  >Luego hacer commit para confirmas los cambios</span
+                >
+              </p>
+            </div>
           </div>
         </div>
       </div>
