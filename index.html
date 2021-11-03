@@ -308,7 +308,7 @@
           </div>
         </div>
         <div class="row__item">
-          <h3>Confirmar tus Cambios</h3>
+          <h3>Confirmar tus Cambios <span class="numero-pagina">34</span></h3>
           <p>
             Recuerda que cualquier cosa que no <b>esté preparada</b> - cualquier
             archivo que <b>hayas creado</b> o <b>modificado</b> y que no hayas
@@ -316,7 +316,43 @@
             <b>no será confirmado.</b> Se mantendrán como
             <b>archivos modificados en tu disco.</b>
           </p>
-          <p><span>git commit -m "descripcion"</span></p>
+          <p><span class="comando">git commit -m "descripcion"</span></p>
+          <p>
+            Recuerda que la confirmación
+            <span class="resaltado"
+              >guarda una instantánea de tu área de preparación.</span
+            >
+            Todo lo que no hayas preparado
+            <span class="resaltado">sigue allí modificado;</span>
+          </p>
+        </div>
+        <div class="row__item">
+          <h3>
+            Saltar el Área de Preparación<span class="numero-pagina">35</span>
+          </h3>
+          <p>
+            Si quieres saltarte el área de preparación, Git te ofrece un atajo
+            sencillo. Añadiendo la opción <span class="comando">-a</span> al
+            comando <span class="comando">git commit</span> harás que Git
+            prepare automáticamente
+            <span class="resaltado">todos los archivos rastreados</span> antes
+            de confirmarlos, ahorrándote el paso de
+            <span class="comando">git add</span>.
+          </p>
+          <p>
+            <span>git commit -am "mensaje"</span>: Fíjate que en este caso no
+            fue necesario ejecutar <span class="comando">git add </span> sobre
+            el archivo ejemplo.html antes de confirmar.
+          </p>
+          <div class="detalle">
+            <h4>Nota:</h4>
+            <p>
+              Este combinación de comandos solo sera valido
+              <span class="resaltado"
+                >para los archivos qu tenga seguimiento.</span
+              >
+            </p>
+          </div>
         </div>
       </div>
     </div>
