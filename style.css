@@ -1,0 +1,39 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  background-color: lightblue;
+}
+.content {
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 3px;
+}
+h1 {
+  text-align: center;
+  color: royalblue;
+}
+.row {
+  margin: 10px 0;
+  padding: 10px;
+  border-bottom: x1p solid rgb(0 0 0/0.5);
+}
+.row__item {
+  margin-bottom: 10px;
+  border-left: 2px solid red;
+}
+
+.comando {
+  color: darkorange;
+  font-style: oblique;
+}
+.resaltado {
+  font-weight: bold;
+}
