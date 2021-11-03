@@ -674,8 +674,137 @@
         </div>
         <div class="row">
           <div class="row__item">
-            <h2>Deshacer Cosas</h2>
-            <p></p>
+            <h2 class="subtitle">Deshacer Cosas</h2>
+            <p>
+              Revisaremos algunas herramientas básicas
+              <span class="resaltado">
+                usadas para deshacer cambios que hayas hecho.</span
+              >
+              Ten cuidado,
+              <span class="resaltado"
+                >a veces no es posible recuperar algo luego que lo has
+                deshecho.</span
+              >
+              Esta es una de las pocas áreas en las que
+              <span class="resaltado">
+                Git puede perder parte de tu trabajo
+              </span>
+              si cometes un error.
+            </p>
+          </div>
+          <div class="row__item">
+            <div class="head-subtitle">
+              <h3 class="subtitle">Deshacer una confirmación</h3>
+              <span class="numero-pagina">pg:45</span>
+            </div>
+
+            <p>
+              <span class="comando"> git commit --amend</span>:Si quieres
+              rehacer la confirmación, puedes reconfirmar con la opción
+              <span class="comando">--amend</span>
+            </p>
+            <p>
+              Este comando utiliza tu
+              <span class="resaltado">
+                área de preparación para la confirmación.</span
+              >
+              Si no has hecho cambios desde tu última confirmación (por ejemplo,
+              ejecutas este comando justo después de tu confirmación anterior),
+              entonces la instantánea lucirá exactamente igual y lo único que
+              cambiarás será el mensaje de confirmación.
+            </p>
+            <p>
+              Se lanzará
+              <span class="resaltado"> el mismo editor de confirmación,</span>
+              pero verás que ya
+              <span class="resaltado">
+                incluye el mensaje de tu confirmación anterior.</span
+              >
+              Puedes editar el mensaje como siempre y se sobreescribirá tu
+              confirmación anterior
+            </p>
+          </div>
+          <div class="row__item">
+            <div class="head-subtitle">
+              <h3>
+                Deshacer una confirmacion y preparar nuevos archivos para la
+                misma confirmacion
+              </h3>
+              <span class="numero-pagina">pg:45</span>
+            </div>
+            <p>
+              Por ejemplo, si confirmas y luego te das cuenta que olvidaste
+              preparar los cambios de un archivo que querías incluir en esta
+              confirmación, puedes hacer lo siguiente:
+            </p>
+            <ul>
+              <li>
+                <span class="comando">git commit -m "description"</span>: Commit
+                inicial en el cual olvide incluir un archivo.txt
+              </li>
+              <li>
+                <span class="comando">git add archivo.tx</span>: Agrego el
+                archivo al area de preparacion
+                <span class="resaltado"
+                  >(este archivo olvide icluir en la confirmacion
+                  anterior)</span
+                >
+              </li>
+              <li>
+                <span class="comando">git commit --amend</span>:Al final
+                terminarás con una sola confirmación - la segunda confirmación
+                <span class="resaltado">
+                  reemplaza el resultado de la primera.</span
+                >Incluyendo en la confirmacion el archivo.tx.
+              </li>
+            </ul>
+          </div>
+          <div class="row__item">
+            <div class="head-subtitle">
+              <h3>Deshacer un Archivo Preparado</h3>
+              <span class="numero-pagina">pg:46</span>
+            </div>
+            <p>
+              Las siguientes dos secciones demuestran cómo lidiar con los
+              cambios de tu área de preparación y tú directorio de
+              trabajo.Afortunadamente, el comando que usas para determinar el
+              estado de esas dos áreas
+              <span class="comando">(git status)</span> también te recuerda cómo
+              deshacer los cambios en ellas.
+            </p>
+            <p>
+              Al ejecutat el comando <span class="comando">git status</span> te
+              recuerda como hacer esas acciones.
+            </p>
+            <p>
+              <span class="comando">git restore --staged archivo</span> :
+              Permite sacar del area de preparación al archivo.
+            </p>
+          </div>
+          <div class="row__item">
+            <div class="head-subtitle">
+              <h3 class="subtitle">Deshacer un Archivo Modificado</h3>
+              <span class="numero-pagina">pag: 47</span>
+            </div>
+            <p>
+              Que tal si no queremos mantener los cambios en un archivo que
+              estamos modificando,
+              <span class="resaltado"
+                >Osea queremos que el arhivo vuelva al estado en que se
+                encontraba antes de editarlo</span
+              >
+            </p>
+            <p>
+              Para volver al estado en el que estaba en la última confirmación
+              (o cuando estaba recién clonado, o como sea que haya llegado a tu
+              directorio de trabajo)?, podemos ejecutar el comando
+              <span class="comando">git status</span> para que nos muestre el
+              comando a utilizar.
+            </p>
+            <p>
+              <span class="comando">git restore archivo</span>: restuara a la
+              version antes de modificarlo.
+            </p>
           </div>
         </div>
       </div>
