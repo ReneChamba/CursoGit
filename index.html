@@ -550,6 +550,128 @@
             </div>
           </div>
         </div>
+        <div class="row">
+          <div class="row__item">
+            <h2 class="subtitle">Ver el Historial de Confirmaciones</h2>
+            <p>
+              La herramienta más básica y potente para hacer esto es el comando
+              <span class="comando">git log.</span> Nos permite ver el historial
+              de confirmaciones <span class="comando">commit</span> ,
+              probablemente quieras mirar atrás para ver qué modificaciones se
+              han llevado a cabo
+            </p>
+          </div>
+          <div class="row__item">
+            <div class="head-subtitle">
+              <h3 class="subtitle">Ejecutar Comando</h3>
+              <span class="numero-pagina">pg:38</span>
+            </div>
+            <p>
+              <span class="comando">git log</span> : lista las confirmaciones
+              hechas sobre ese repositorio en
+              <span class="resaltado">orden cronológico inverso.</span> Es
+              decir,
+              <span class="resaltado"
+                >las confirmaciones más recientes se muestran al
+                principio.</span
+              >
+            </p>
+          </div>
+          <div class="row__item">
+            <div class="head-subtitle">
+              <h3 class="subtitle">Opciones para ejecutar log</h3>
+              <span class="numero-pagina">pg:39</span>
+            </div>
+            <p>
+              El comando git log proporciona gran cantidad de opciones para
+              mostrarte exactamente lo que buscas. Aquí veremos algunas de las
+              más usadas.
+            </p>
+            <ul>
+              <li>
+                <p>
+                  Limitar las salidas de confirmaciones
+                  <span class="comando">(-numero)</span>
+                </p>
+                <p>
+                  <span class="comando">git log -2</span> :Mostrara las dos
+                  ultimas confirmaciones
+                </p>
+              </li>
+              <li>
+                <p>
+                  Mostrar las diferencias introducidas en cada confirmación
+                  <span class="comando">(-p)</span>
+                </p>
+                <p>
+                  <span class="comando">git log -p</span>: Mostrara las
+                  confirmaciones agregando las diferencias en cada confirmacion
+                </p>
+              </li>
+              <li>
+                <p>
+                  Combinacion de las dos opciones anteriores<span
+                    class="comando"
+                  >
+                    (-p -2)</span
+                  >
+                </p>
+                <p>
+                  <span class="comando">git log -p -2</span>: Listara las dos
+                  ultimas confirmaciones agregando las diferencias en cada
+                  confirmacion
+                </p>
+              </li>
+              <li>
+                <p>
+                  El comando <span class="comando">git log</span> puede usar una
+                  serie de
+                  <span class="resaltado">opciones de resumenes.</span> Veremos
+                  algnos de ellos
+                </p>
+                <ul>
+                  <li>
+                    <p>
+                      <span class="comando">git log --stat</span>: la opcion
+                      <span class="comando">--stat</span> permite ver algunas
+                      estadísticas de cada confirmación,
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <span class="comando">git log --stat -1</span>: podemos
+                      combinar con las opciones vista anteriormente.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <span class="comando">git log -p --stat -1</span>: podemos
+                      combinar con las opciones vista anteriormente.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <span class="comando">git log --oneline</span>: Listar
+                      cada confirmacion en una sola
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <span class="comando">git log --oneline -2</span>: Listar
+                      las dos ultimas confirmaciones en una sola linea.
+                    </p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Hay muchas opciones máss que permiten personalizar y combinar la
+                salida con el comando <span class="comando">git log</span>,
+                revisar desde la pagina
+                <span class="resaltado"> 38 hasta 45</span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </body>
