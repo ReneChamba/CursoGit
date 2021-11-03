@@ -354,6 +354,72 @@
             </p>
           </div>
         </div>
+        <div class="row__item">
+          <h3>Eliminar Archivos <span class="numero-pagina"></span>36</h3>
+          <div>
+            <h4>
+              Caso 1: Eliminar el seguimiento de archivos que sólo están en
+              staging area
+              <span class="comando"> (no se ha hecho ningun commit aun )</span>
+            </h4>
+            <p>
+              <span class="comando">git reset HEAD archivo</span>: Con esto git
+              dejara de dar seguimiento al archivo.
+            </p>
+            <p>
+              <span class="comando">git reset HEAD</span>: Con esto git dejara
+              de dar seguimiento a todos los archivos de la rama actual.
+            </p>
+          </div>
+          <div>
+            <h4>
+              Caso 2: Eliminar del repositorio archivos que ya se han confirmado
+              <span> (se ha hecho commit)</span>
+            </h4>
+            <p>
+              Una vez confirmados los cambios, es decir, una vez has hecho
+              commit a esos archivos por primera vez, los archivos ya forman
+              parte del repositorio y sacarlos de allí requiere algún paso
+              adicional. Pero es posible gracias a la instrucción
+              <span class="comando">rm</span>, opciones:
+            </p>
+
+            <p>
+              <span class="comando">git rm arhivo</span>:
+              <span class="resaltado">Cuidado</span> este comando elimina el
+              arhivo de repositorio Git pero además lo elimina de nuestro
+              <span class="comando">Directorio de Trabajo</span>, osea de
+              nuestro proyecto.
+            </p>
+            <p>
+              <span class="comando">git rm --cached archivo </span> : Elimina el
+              archivo de repositorio pero el archivo aún permanecera en nuestro
+              <span class="comando">Directorio de Trabajo</span>, osea aún
+              estara en nuestro proyecto.
+            </p>
+            <p>
+              <span class="comando">git rm -r --cached nombreDirectorio </span>
+              : Borrar un directorio y todos sus contenidos, eso archivos aun
+              permaneceran en nuestro
+              <span class="comando">Directorio de Trabajo</span>, osea aún
+              estara en nuestro proyecto.
+            </p>
+
+            <p>
+              Luego de eliminar los archivos del repositorio de Git,estos se
+              marcaran como archivos sin seguimiento
+              <span class="resaltado">(Untracked)</span>, posterior tendras que
+              asegurarte de que sean ignorados en el archivo
+              <span class="comando">.gitignore</span> para que deje de aparecer
+              como archivo <span class="resaltado">sin seguimiento.</span> y
+              para que no los volvamos a meter en el repositorio cuando
+              confirmemos cambios más adelante con commit,
+              <span class="comando"
+                >Luego hacer commit para confirmas los cambios</span
+              >
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </body>
