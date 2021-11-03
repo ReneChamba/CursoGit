@@ -3,7 +3,8 @@ body {
   margin: 0;
 }
 .container {
-  background-color: lightblue;
+  /* background-color: lightblue; */
+  background-color: rgb(240, 236, 236);
 }
 .content {
   max-width: 1200px;
@@ -15,24 +16,50 @@ h2,
 h3,
 h4 {
   margin-top: 3px;
+  margin-bottom: 5px;
 }
 h1 {
   text-align: center;
   color: royalblue;
 }
+h2 {
+  font-weight: normal;
+  color: darkred;
+  font-size: 1.8em;
+}
 .row {
-  margin: 10px 0;
+  margin-top: 25px;
   padding: 10px;
   border-bottom: x1p solid rgb(0 0 0/0.5);
+  border-left: 2px solid red;
+  background: white;
+
+  /* background-color: lightgray; */
+}
+.row h2 {
+  margin-bottom: 5px;
 }
 .row__item {
-  margin-bottom: 10px;
-  border-left: 2px solid red;
+  margin-bottom: 25px;
 }
-
+.row .row__item:last-child {
+  margin-bottom: 0;
+}
+.row__item h3 {
+  font-weight: normal;
+  font-size: 1.2em;
+  color: royalblue;
+}
+.row__item h4 {
+  /* color: red; */
+}
+.row__item p {
+  margin-top: 3px;
+  line-height: 25px;
+}
 .comando {
-  color: darkorange;
-  font-style: oblique;
+  color: rgb(255, 94, 0);
+  /* font-style: oblique; */
 }
 .resaltado {
   font-weight: bold;
