@@ -807,6 +807,274 @@
             </p>
           </div>
         </div>
+        <div class="row">
+          <div class="row__item">
+            <h2 class="subtitle">Trabajar con Remotos</h2>
+            <p>
+              Para poder colaborar en cualquier proyecto Git, necesitas saber
+              cómo gestionar repositorios remotos.
+              <span class="resaltado">
+                Los repositorios remotos son versiones de tu proyecto que están
+                hospedadas en Internet o en cualquier otra red.
+              </span>
+              Puedes tener varios de ellos, y en cada uno tendrás generalmente
+              permisos de solo lectura o de lectura y escritura.
+            </p>
+          </div>
+          <div class="row__item">
+            <div class="head-subtitle">
+              <h3 class="subtitle">Ver tus remotos</h3>
+              <span class="numero-pagina">pg:48</span>
+            </div>
+            <p>
+              <span class="comando">git remote</span>: Para ver los remotos que
+              tienes configurados. Mostrará los nombres de cada uno de los
+              remotos que tienes especificados.
+            </p>
+            <p>
+              Si has clonado tu repositorio, deberías ver al menos
+              <span class="comando">origin</span>
+              (origen, en inglés) - este es el nombre que por defecto Git le da
+              al servidor del que has clonado:
+            </p>
+            <p>
+              <span class="comando">git remote -v</span>: agregando la opcion
+              <span class="comando">-v</span> mostrará las
+              <span class="resaltado">URLs</span> que Git ha asociado al nombre
+              y que serán usadas al leer y escribir en ese remoto:
+            </p>
+          </div>
+          <div class="row__item">
+            <div class="head-subtitle">
+              <h3 class="subtitle">Añadir remotos</h3>
+              <span class="numero-pagina">pg: 49</span>
+            </div>
+            <p>
+              Para añadir un remoto nuevo y asociarlo a un nombre que puedas
+              referenciar fácilmente, ejecuta
+              <span class="comando">git remote add [nombre] [url]</span>
+            </p>
+            <p>
+              Ejemplo:
+              <span class="comando">
+                git remote add rene https://github.com/paulboone/ticgit:</span
+              >
+              : A partir de ahora puedes usar el nombre
+              <span class="comando">rene</span> en la línea de comandos en lugar
+              de la URL entera.
+            </p>
+            <p>
+              El <span class="resaltado">nombre por defecto</span> que se le da
+              al srvidor cuando clonas un repositorio es
+              <span class="comando">orgin</span>
+            </p>
+          </div>
+          <div class="row__item">
+            <div class="head-subtitle">
+              <h3 class="subtitle">Traer y Combinar Remotos</h3>
+              <span class="numero-pagina">pg:50</span>
+            </div>
+            <p>
+              Como hemos visto hasta ahora, para obtener datos de tus proyectos
+              remotos puedes ejecutar:
+            </p>
+            <p>
+              <span class="comando">git fech [remote-name]</span>: Este comando
+              solo trae datos a tu repositorio local - ni lo combina
+              automáticamente con tu trabajo ni modifica el trabajo que llevas
+              hecho.
+              <span class="resaltado"
+                >La combinación con tu trabajo debes hacerla manualmente cuando
+                estés listo.</span
+              >
+            </p>
+            <p>
+              <span class="comando">git fech origin</span>: se trae todo el
+              trabajo nuevo que ha sido enviado a ese servidor desde que lo
+              clonaste (o desde la última vez que trajiste datos).
+              <span class="resaltado"
+                >(Recuerda que <span class="comando">git fech</span>) no combina
+              </span>
+            </p>
+            <p>
+              <span class="comando">git push orgin master</span>: envia al
+              origin <span class="comando">(respositorio remoto)</span> la rama
+              master
+            </p>
+          </div>
+          <div class="row__item">
+            <div class="head-subtitle">
+              <h3 class="subtitle">Inspeccionar un remoto</h3>
+              <span class="numero-pagina">pg: 51</span>
+            </div>
+            <p>
+              <span class="comando">git remote show [nombre-remoto]</span>:Si
+              quieres ver más información acerca de un remoto en particular.
+            </p>
+            <p>
+              Ejemplo: <span class="comando">git remote show origin</span>:
+              lista la URL del repositorio remoto y la información del rastreo
+              de ramas
+            </p>
+          </div>
+          <div class="row__item">
+            <div class="head-subtitle">
+              <h3>Eliminar y Renombrar Remotos</h3>
+              <span class="numero-pagina">pg:52</span>
+            </div>
+            <p>
+              Si quieres cambiar el nombre de la referencia de un remoto puedes
+              ejecutar <span class="comando">git remote rename.</span> Por
+              ejemplo, si quieres cambiar el nombre de
+              <span class="comando">origin</span> a
+              <span class="comando">rene</span> puedes ejecurar lo siguiente:
+            </p>
+            <p>
+              <span class="comando">git remote rename origin rene</span> : Es
+              importante destacar que al hacer esto
+              <span class="resaltado"
+                >también cambias el nombre de las ramas remotas.</span
+              >
+              Por lo tanto, lo que antes estaba referenciado como
+              <span class="comando">origin/master</span> ahora lo está como
+              <span class="comando">rene/master</span>.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row__item">
+            <h2 class="subtitle">Etiquetado</h2>
+            <p>
+              Como muchos VCS, Git tiene la posibilidad de
+              <span class="resaltado"
+                >etiquetar puntos específicos del historial como
+                importantes.</span
+              >
+              Esta funcionalidad se usa típicamente
+              <span class="resaltado"
+                >para marcar versiones de lanzamiento</span
+              >
+              (v1.0, por ejemplo).
+            </p>
+            <p>
+              Para el etiquetado
+              <span class="resaltado"
+                >se toma por defecto la referencia a la ultima
+                confirmacion,</span
+              >
+              sin embargo
+              <span class="resaltado"
+                >se puede especificar una version en particular de una
+                confirmacion
+              </span>
+              para el etiquetado.
+              <span class="resaltado"></span>
+            </p>
+          </div>
+          <div class="row__item">
+            <div class="head-subtitle">
+              <h3>Listar etiquetas</h3>
+              <span class="numero-pagina">pg:53</span>
+            </div>
+            <p>
+              <span class="comando">git tag</span>: lista las etiquetas en orden
+              alfabético; el orden en el que aparecen no tiene mayor
+              importancia.
+            </p>
+          </div>
+          <div class="row__item">
+            <div class="head-subtitle">
+              <h3>Listar etiquetas con un patrón de busqueda</h3>
+              <span class="numero-pagina">pg:53</span>
+            </div>
+            <p>
+              <span class="comando">git tag -l "v1.*"</span>: la opcion
+              <span class="comando">-l</span> permite especificar una patron de
+              busqueda.
+            </p>
+          </div>
+          <div class="row__item">
+            <div class="head-subtitle">
+              <h3>Crear etiquetas</h3>
+              <span class="numero-pagina">pg:53</span>
+            </div>
+            <p>
+              Git utiliza dos tipos principales de etiquetas:
+              <span class="resaltado">ligeras y anotadas.</span>
+            </p>
+
+            <ul>
+              <li>
+                <span class="resaltado">Ligeras:</span> es muy parecido a una
+                rama que no cambia, simplemente
+                <span class="resaltado"
+                  >es un puntero a un commit específico.</span
+                >
+                <p>
+                  <span class="comando">git tag v1.01</span>: Crear etiqueta
+                  ligera
+                </p>
+              </li>
+              <li>
+                <span class="resaltado">Anotadas:</span>se guardan en la base de
+                datos de Git
+                <span class="resaltado">como objetos enteros.</span>, ver mas
+                detalles importantes en el libro.
+                <p>
+                  <span class="comando">git tag -a v1.01 -m "mensaje </span>:
+                  Crear etiqueta anotada.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="row__item">
+            <div class="head-subtitle">
+              <h3>Ver información de la etiqueta</h3>
+              <span class="numero-pagina">pg:54</span>
+            </div>
+            <p>
+              <span class="comando">git show v1.02</span>:ver la información de
+              la etiqueta junto
+              <span class="resaltado">con el commit que está etiquetado.</span>
+            </p>
+          </div>
+          <div class="row__item">
+            <div class="head-subtitle">
+              <h3>Etiquetado Tardío</h3>
+              <span class="numero-pagina">pg:55</span>
+            </div>
+            <p>
+              También puedes etiquetar commits mucho tiempo después de haberlos
+              hecho.
+            </p>
+            <p>
+              <span class="comando"
+                >git tag -a v1.02
+                <span class="resaltado">594545gfg</span> </span
+              >: Como ultimo parametro del comando especificamos el
+              <span class="resaltado"> checksum</span> del commit a etiquetar.
+            </p>
+          </div>
+          <div class="row__item">
+            <div class="head-subtitle">
+              <h3>Compartir Etiquetas</h3>
+              <span class="numero-pagina">pg:56</span>
+            </div>
+            <p>
+              Por defecto, el comando <span class="comando">git push</span> no
+              transfiere las etiquetas a los servidores remotos. Debes enviar
+              las etiquetas de forma explícita al servidor
+            </p>
+            <p>
+              <span class="comando">git push origin tag</span>:Enviar una
+              etiqueta al servidor remoto.
+            </p>
+            <p>
+              <span class="comando">git push origin --tags</span>:Esto enviará
+              al servidor remoto todas las etiquetas que aun no existen en él.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </body>
