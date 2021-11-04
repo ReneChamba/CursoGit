@@ -941,6 +941,140 @@
             </p>
           </div>
         </div>
+        <div class="row">
+          <div class="row__item">
+            <h2 class="subtitle">Etiquetado</h2>
+            <p>
+              Como muchos VCS, Git tiene la posibilidad de
+              <span class="resaltado"
+                >etiquetar puntos específicos del historial como
+                importantes.</span
+              >
+              Esta funcionalidad se usa típicamente
+              <span class="resaltado"
+                >para marcar versiones de lanzamiento</span
+              >
+              (v1.0, por ejemplo).
+            </p>
+            <p>
+              Para el etiquetado
+              <span class="resaltado"
+                >se toma por defecto la referencia a la ultima
+                confirmacion,</span
+              >
+              sin embargo
+              <span class="resaltado"
+                >se puede especificar una version en particular de una
+                confirmacion
+              </span>
+              para el etiquetado.
+              <span class="resaltado"></span>
+            </p>
+          </div>
+          <div class="row__item">
+            <div class="head-subtitle">
+              <h3>Listar etiquetas</h3>
+              <span class="numero-pagina">pg:53</span>
+            </div>
+            <p>
+              <span class="comando">git tag</span>: lista las etiquetas en orden
+              alfabético; el orden en el que aparecen no tiene mayor
+              importancia.
+            </p>
+          </div>
+          <div class="row__item">
+            <div class="head-subtitle">
+              <h3>Listar etiquetas con un patrón de busqueda</h3>
+              <span class="numero-pagina">pg:53</span>
+            </div>
+            <p>
+              <span class="comando">git tag -l "v1.*"</span>: la opcion
+              <span class="comando">-l</span> permite especificar una patron de
+              busqueda.
+            </p>
+          </div>
+          <div class="row__item">
+            <div class="head-subtitle">
+              <h3>Crear etiquetas</h3>
+              <span class="numero-pagina">pg:53</span>
+            </div>
+            <p>
+              Git utiliza dos tipos principales de etiquetas:
+              <span class="resaltado">ligeras y anotadas.</span>
+            </p>
+
+            <ul>
+              <li>
+                <span class="resaltado">Ligeras:</span> es muy parecido a una
+                rama que no cambia, simplemente
+                <span class="resaltado"
+                  >es un puntero a un commit específico.</span
+                >
+                <p>
+                  <span class="comando">git tag v1.01</span>: Crear etiqueta
+                  ligera
+                </p>
+              </li>
+              <li>
+                <span class="resaltado">Anotadas:</span>se guardan en la base de
+                datos de Git
+                <span class="resaltado">como objetos enteros.</span>, ver mas
+                detalles importantes en el libro.
+                <p>
+                  <span class="comando">git tag -a v1.01 -m "mensaje </span>:
+                  Crear etiqueta anotada.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="row__item">
+            <div class="head-subtitle">
+              <h3>Ver información de la etiqueta</h3>
+              <span class="numero-pagina">pg:54</span>
+            </div>
+            <p>
+              <span class="comando">git show v1.02</span>:ver la información de
+              la etiqueta junto
+              <span class="resaltado">con el commit que está etiquetado.</span>
+            </p>
+          </div>
+          <div class="row__item">
+            <div class="head-subtitle">
+              <h3>Etiquetado Tardío</h3>
+              <span class="numero-pagina">pg:55</span>
+            </div>
+            <p>
+              También puedes etiquetar commits mucho tiempo después de haberlos
+              hecho.
+            </p>
+            <p>
+              <span class="comando"
+                >git tag -a v1.02
+                <span class="resaltado">594545gfg</span> </span
+              >: Como ultimo parametro del comando especificamos el
+              <span class="resaltado"> checksum</span> del commit a etiquetar.
+            </p>
+          </div>
+          <div class="row__item">
+            <div class="head-subtitle">
+              <h3>Compartir Etiquetas</h3>
+              <span class="numero-pagina">pg:56</span>
+            </div>
+            <p>
+              Por defecto, el comando <span class="comando">git push</span> no
+              transfiere las etiquetas a los servidores remotos. Debes enviar
+              las etiquetas de forma explícita al servidor
+            </p>
+            <p>
+              <span class="comando">git push origin tag</span>:Enviar una
+              etiqueta al servidor remoto.
+            </p>
+            <p>
+              <span class="comando">git push origin --tags</span>:Esto enviará
+              al servidor remoto todas las etiquetas que aun no existen en él.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </body>
