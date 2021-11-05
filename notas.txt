@@ -14,3 +14,6 @@ ultimo commit. Git no los incluirá en tu próximo commit
 
 * Cambiar de rama: Antes de cambiar de rama es importante tener el area de trabajo limpio, nada en el stagin xq si no  GIT no nos permitira cambiar de rama 
 
+* Instantanea: Git no los almacena de forma incremental (guardando solo diferencias), sino que los almacena como una
+serie de instantáneas (copias puntuales de los archivos completos, tal y como se
+encuentran en ese momento).
