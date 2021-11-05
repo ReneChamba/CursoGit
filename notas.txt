@@ -17,3 +17,6 @@ ultimo commit. Git no los incluirá en tu próximo commit
 * Instantanea: Git no los almacena de forma incremental (guardando solo diferencias), sino que los almacena como una
 serie de instantáneas (copias puntuales de los archivos completos, tal y como se
 encuentran en ese momento).
+
+* Checksum: Git guarda cada objeto con un indentificado (Checksum) el cual consiste  en  una secuencia de 41 caractertes (40  caracteres entre  letras y numeros) y 1 retorno de carro, 
+  NO LOS GUARDA CON UN NOMBRE, puede ver en la carpeta objects del repositorio actual este comportamiento.
