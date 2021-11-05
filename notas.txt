@@ -4,3 +4,13 @@ tracked files(archivos restreades) y Untracked(archivos sin rastreo).
 * Untracked : Archivos Sin Seguimiento, Git observa que este achivo no estaba en el registro del 
 ultimo commit. Git no los incluirá en tu próximo commit
 
+* Rama master: Es la rama que se crea por defecto al ejecutar git init.
+
+* Una rama apunta hacia una confirmacion, por eso es obligatorio haber realizado 
+  una confirmacion para poder crear una nueva rama.
+
+* Primera confirmacion en el repositorio:  Cuando realizamos la primera confirmacion(commit) se creará la rama principal master apuntando
+  a dicha confirmación.
+
+* Cambiar de rama: Antes de cambiar de rama es importante tener el area de trabajo limpio, nada en el stagin xq si no  GIT no nos permitira cambiar de rama 
+

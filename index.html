@@ -1075,6 +1075,118 @@
             </p>
           </div>
         </div>
+        <div class="row">
+          <div class="row__item">
+            <h2 class="subtitle">Ramificacion</h2>
+            <p>
+              Una rama Git
+              <span class="resaltado"
+                >es simplemente un apuntador móvil apuntando a una de esas
+                confirmaciones.</span
+              >
+              La rama por defecto de Git es la
+              <span class="comando resaltado">rama master.</span>
+              <span class="resaltado">
+                Con la primera confirmación de cambios que realicemos, se creará
+                esta rama principal
+              </span>
+              <span class="comando resaltado">master</span> apuntando a dicha
+              confirmación. En cada confirmación de cambios que realicemos, la
+              rama irá avanzando automáticamente.
+            </p>
+          </div>
+          <div class="row__item">
+            <div class="head-subtitle">
+              <h3 class="subtitle">Crear un nueva rama</h3>
+              <span class="numero-pagina">pg:61</span>
+            </div>
+            <p>
+              simplemente
+              <span class="resaltado"
+                >se crea un nuevo apuntador para que lo puedas mover
+                libremente.</span
+              >
+            </p>
+            <p>
+              <span class="comando">git branch nuevaRama</span>: Crea un
+              apuntador a la misma confirmacion donde estés actualmte
+            </p>
+          </div>
+          <div class="row__item">
+            <div class="head-subtitle">
+              <h3 class="subtitle">
+                Apuntador especial denominado
+                <span class="comando resaltado">HEAD</span>
+              </h3>
+              <span class="numero-pagina">pg:62</span>
+            </div>
+            <p>
+              En Git, es simplemente el
+              <span class="resaltado"
+                >apuntador a la rama local en la que tú estés en ese
+                momento,</span
+              >
+            </p>
+          </div>
+          <div class="row__item">
+            <div class="head-subtitle">
+              <h3 class="subtitle">Cambiar de Rama</h3>
+              <span class="numero-pagina">pg:63</span>
+            </div>
+            <p>
+              <span class="comando">git checkout master</span> : Este hará que
+              el apuntador especial <span class="comando">HEAD</span> apunte a
+              la rama <span class="comando">master</span>
+            </p>
+            <p>
+              <span class="resaltado">Nota: </span> Hemos de tomar en cuenta que
+              <span class="resaltado"
+                >si tenemos cambios aún no confirmados</span
+              >
+              en el directorio de trabajo o en el área de preparación,
+              <span class="resaltado"
+                >Git no nos permitirá saltar a otra rama</span
+              >
+              con la que podríamos tener conflictos.
+              <span class="resaltado"
+                >Lo mejor es tener siempre un estado de trabajo limpio</span
+              >
+              y despejado antes de saltar entre ramas
+            </p>
+          </div>
+          <div class="row__item">
+            <div class="head-subtitle">
+              <h3 class="subtitle">Fusionar ramas</h3>
+              <span class="numero-pagina">pg:69</span>
+            </div>
+            <p>
+              Antes de fusionar <span class="comando"> (merge)</span> ramas es
+              importante volver a la rama principal
+              <span class="comando">master</span>
+            </p>
+            <p>
+              <span class="comando">git merge develop</span>: Tras la fusión
+              (merge), la rama <span class="comando">master</span> apunta al
+              mismo sitio que la rama <span class="comando">develop</span>.
+            </p>
+          </div>
+          <div class="row__item">
+            <div class="head-subtitle">
+              <h3 class="subtitle">Eliminar ramas</h3>
+              <span class="numero-pagina">pg:70</span>
+            </div>
+            <p>
+              Luego de fusionar <span class="comando">merge</span> una rama , es
+              importante borrar la rama fusionada, ya que no la vamos a
+              necesitar más, puesto que apunta exactamente al mismo sitio que la
+              rama <span class="comando">master</span>.
+            </p>
+            <p>
+              <span class="comando">git branch -d develop</span>: Elimina rama
+              develop
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </body>
