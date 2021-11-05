@@ -14,3 +14,4 @@ ultimo commit. Git no los incluirá en tu próximo commit
 
 * Cambiar de rama: Antes de cambiar de rama es importante tener el area de trabajo limpio, nada en el stagin xq si no  GIT no nos permitira cambiar de rama 
 
+Este puede generar un conflicto jejeje
