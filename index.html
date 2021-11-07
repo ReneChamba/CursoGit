@@ -8,7 +8,197 @@
     <div class="container">
       <div class="content">
         <h1 class="title">Comandos basicos de Git</h1>
-        <div class="row">
+
+        <div class="row" id="contenidos">
+          <div class="row__item">
+            <h2 class="subtitle resaltado">Contenidos</h2>
+            <ul class="lista lista-contenido">
+              <li>
+                <a href="#identidad">Identidad</a>
+                <ul class="lista">
+                  <li>
+                    <a href="#identidad-conf-global"
+                      >Configurar identidad de forma global</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#identidad-conf-local"
+                      >Configurar identidad para un proyecto especifico
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#comprobando">Comprobando tu Configuración</a>
+                <ul class="lista">
+                  <li>
+                    <a href="#comprobando-lista">Ver la configuración de git</a>
+                  </li>
+                  <li>
+                    <a href="#comprobando-variable"
+                      >Ver el valor de una variable de configuración</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#ayuda">Obtener ayuda</a>
+                <ul class="lista">
+                  <li><a href="#ayuda-ver">Ver ayuda</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#iniciar">Iniciar un repositorio Git</a>
+                <ul class="lista">
+                  <li><a href="#iniciar-inicio">Iniciar un respositorio</a></li>
+                  <li><a href="#iniciar-clonar">Clonar un repositorio</a></li>
+                  <li>
+                    <a href="#iniciar-clonar-directorio"
+                      >Clonar un repositorio con nombre especifico
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#guardar">Guardando cambios en el Repositorio</a>
+                <ul class="lista">
+                  <li>
+                    <a href="#guardar-estados">Estados de los archivos</a>
+                  </li>
+                  <li>
+                    <a href="#guardar-ver-estados"
+                      >Ver Estados de los archivos</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#guardar-rastrear">Rastrear archivos nuevos</a>
+                  </li>
+                  <li>
+                    <a href="#guardar-preparar"
+                      >Preparar Archivos Modificados</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#guardar-dos-estados"
+                      >¿Dos estados de un archivo?</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#guardar-sacar-staging"
+                      >Sacar un archivo de staging area</a
+                    >
+                  </li>
+                  <li><a href="#guardar-ignorar">Ignorar archivos</a></li>
+                  <li>
+                    <a href="#guardar-ver-cambios-preparados"
+                      >Ver los Cambios Preparados y No Preparados
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#guardar-confirmar">Confirmar tus Cambios</a>
+                  </li>
+                  <li>
+                    <a href="#guardar-saltar">Saltar el Área de Preparación</a>
+                  </li>
+                  <li><a href="#guardar-eliminar">Eliminar Archivos</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#historial">Ver el Historial de Confirmaciones</a>
+                <ul class="lista">
+                  <li><a href="#historial-comando">Ejecutar Comando</a></li>
+                  <li>
+                    <a href="#historial-opciones">Opciones para ejecutar log</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#deshacer">Deshacer Cosas</a>
+                <ul class="lista">
+                  <li>
+                    <a href="#deshacer-confirmacion"
+                      >Deshacer una confirmación</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#deshacer-confi-add"
+                      >Deshacer una confirmacion y preparar nuevos archivos para
+                      la misma confirmacion
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#deshacer-preparado"
+                      >Deshacer un Archivo Preparado</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#deshacer-modificado"
+                      >Deshacer un Archivo Modificado</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#remoto">Trabajar con Remotos</a>
+                <ul class="lista">
+                  <li><a href="#remoto-ver">Ver tus remotos</a></li>
+                  <li><a href="#remoto-add">Añadir remotos</a></li>
+                  <li><a href="#remoto-traer">Traer y Combinar Remotos</a></li>
+                  <li>
+                    <a href="#remoto-inspeccionar">Inspeccionar un remoto</a>
+                  </li>
+                  <li>
+                    <a href="#remoto-eliminar">Eliminar y Renombrar Remotos</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#etiquetado">Etiquetado</a>
+                <ul class="lista">
+                  <li><a href="#etiquetado-listar">Listar etiquetas</a></li>
+                  <li>
+                    <a href="#etiquetado-busqueda"
+                      >Listar etiquetas con un patrón de busqueda</a
+                    >
+                  </li>
+                  <li><a href="#etiquetado-crear">Crear etiquetas</a></li>
+                  <li>
+                    <a href="#etiquetado-ver-informacion"
+                      >Ver información de la etiqueta</a
+                    >
+                  </li>
+                  <li><a href="#etiquetado-tardio">Etiquetado Tardío</a></li>
+                  <li>
+                    <a href="#etiquetado-compartir">Compartir Etiquetas</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#ramificacion">Ramificacion</a>
+                <ul class="lista">
+                  <li><a href="#ramificacion-add">Crear un nueva rama</a></li>
+                  <li>
+                    <a href="#ramificacion-head"
+                      >Apuntador especial denominado HEAD</a
+                    >
+                  </li>
+                  <li><a href="#ramificacion-cambiar">Cambiar de Rama</a></li>
+                  <li><a href="#ramificacion-fusionar">Fusionar ramas</a></li>
+                  <li><a href="#ramificacion-eliminar">Eliminar ramas</a></li>
+                  <li>
+                    <a href="#ramificacion-problemas"
+                      >Principales Conflictos que Pueden Surgir en las
+                      Fusiones</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row" id="identidad">
           <div class="row__item">
             <h2 class="subtitle">Identidad</h2>
             <p>
@@ -17,7 +207,7 @@
               que envías:
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="identidad-conf-global">
             <div class="head-subtitle">
               <h3 class="subtitle">Configurar identidad de forma global</h3>
               <span class="numero-pagina">pg-21</span>
@@ -39,7 +229,7 @@
               </p>
             </div>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="identidad-conf-local">
             <div class="head-subtitle">
               <h3 class="subtitle">
                 Configurar identidad para un proyecto especifico
@@ -69,7 +259,7 @@
             </div>
           </div>
         </div>
-        <div class="row">
+        <div class="row" id="comprobando">
           <div class="row__item">
             <h2 class="subtitle">Comprobando tu Configuración</h2>
             <p>
@@ -78,14 +268,14 @@
               configurado:
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="comprobando-lista">
             <div class="head-subtitle">
               <h3 class="subtitle">Ver la configuración de git</h3>
               <span class="numero-pagina">pg-22</span>
             </div>
             <p><span class="comando">git config --list</span></p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="comprobando-variable">
             <div class="head-subtitle">
               <h3>Ver el valor de una variable de configuración</h3>
               <span class="numero-pagina">pg-22</span>
@@ -98,8 +288,8 @@
             </p>
           </div>
         </div>
-        <div class="row">
-          <div class="row__item">
+        <div class="row" id="ayuda">
+          <div class="row__item" id="ayuda-ver">
             <h2 class="subtitle">Obtener ayuda</h2>
             <p>
               Si alguna vez necesitas ayuda usando
@@ -122,7 +312,7 @@
             </p>
           </div>
         </div>
-        <div class="row">
+        <div class="row" id="iniciar">
           <div class="row__item">
             <h2 class="subtitle">Obteniendo un repositorio Git</h2>
             <p>
@@ -132,7 +322,7 @@
               servidor remoto.
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="iniciar-inicio">
             <div class="head-subtitle">
               <h3 class="subtitle">Iniciar un respositorio</h3>
               <span class="numero-pagina">pg:24</span>
@@ -144,7 +334,7 @@
               nuevo
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="iniciar-clonar">
             <div class="head-subtitle">
               <h3 class="subtitle">Clonar un repositorio</h3>
               <span class="numero-pagina">pg:25</span>
@@ -156,7 +346,7 @@
               clonado.
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="iniciar-clonar-directorio">
             <div class="head-subtitle">
               <h3 class="subtitle">
                 Clonar un repositorio con nombre especifico
@@ -179,7 +369,7 @@
             </p>
           </div>
         </div>
-        <div class="row">
+        <div class="row" id="guardar">
           <div class="row__item">
             <h2 class="subtitle">Guardando cambios en el Repositorio</h2>
             <p>
@@ -188,7 +378,7 @@
               proyecto alcance un estado que quieras conservar.
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="guardar-estados">
             <div class="head-subtitle">
               <h3 class="subtitle">Estados de los archivos</h3>
               <span class="numero-pagina">pg:25</span>
@@ -210,7 +400,7 @@
               instantánea y que no está en el área de preparación.
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="guardar-ver-estados">
             <div class="head-subtitle">
               <h3 class="subtitle">Ver Estados de los archivos</h3>
               <span class="numero-pagina">pg:26</span>
@@ -220,7 +410,7 @@
               para determinar qué archivos están en qué estado.
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="guardar-rastrear">
             <div class="head-subtitle">
               <h3 class="subtitle">Rastrear archivos nuevos</h3>
               <span class="numero-pagina">pg:27</span>
@@ -230,7 +420,7 @@
               darle seguimiento al archivo.
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="guardar-preparar">
             <div class="head-subtitle">
               <h3 class="subtitle">Preparar Archivos Modificados</h3>
               <span class="numero-pagina">pg:28</span>
@@ -249,7 +439,7 @@
               proxima confirrmación
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="guardar-dos-estados">
             <div class="head-subtitle">
               <h3 class="subtitle">Dos estados de un archivo</h3>
               <span class="numero-pagina">pg:28-29</span>
@@ -288,14 +478,14 @@
               versión del archivo:
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="guardar-sacar-staging">
             <h3 class="subtitle">Sacar un archivo de staging area</h3>
             <p>
               <span class="comando">git restore --staged nameArchivo</span>:En
               caso que el arhivos no este en el staging area, NO causará error.
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="guardar-ignorar">
             <div class="head-subtitle">
               <h3 class="subtitle">Ignorar archivos</h3>
               <span class="numero-pagina">pg:30</span>
@@ -378,7 +568,7 @@
               </p>
             </div>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="guardar-ver-cambios-preparados">
             <div class="head-subtitle">
               <h3 class="subtitle">
                 Ver los Cambios Preparados y No Preparados
@@ -421,7 +611,7 @@
               </p>
             </div>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="guardar-confirmar">
             <div class="head-subtitle">
               <h3 class="subtitle">Confirmar tus Cambios</h3>
               <span class="numero-pagina">pg: 34</span>
@@ -444,7 +634,7 @@
               <span class="resaltado">sigue allí modificado;</span>
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="guardar-saltar">
             <div class="head-subtitle">
               <h3 class="subtitle">Saltar el Área de Preparación</h3>
               <span class="numero-pagina">pg: 35</span>
@@ -474,7 +664,7 @@
               </p>
             </div>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="guardar-eliminar">
             <div class="head-subtitle">
               <h3 class="subtitle">Eliminar Archivos</h3>
               <span class="numero-pagina">pg:36</span>
@@ -550,7 +740,7 @@
             </div>
           </div>
         </div>
-        <div class="row">
+        <div class="row" id="historial">
           <div class="row__item">
             <h2 class="subtitle">Ver el Historial de Confirmaciones</h2>
             <p>
@@ -561,7 +751,7 @@
               han llevado a cabo
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="historial-comando">
             <div class="head-subtitle">
               <h3 class="subtitle">Ejecutar Comando</h3>
               <span class="numero-pagina">pg:38</span>
@@ -577,7 +767,7 @@
               >
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="historial-opciones">
             <div class="head-subtitle">
               <h3 class="subtitle">Opciones para ejecutar log</h3>
               <span class="numero-pagina">pg:39</span>
@@ -672,7 +862,7 @@
             </ul>
           </div>
         </div>
-        <div class="row">
+        <div class="row" id="deshacer">
           <div class="row__item">
             <h2 class="subtitle">Deshacer Cosas</h2>
             <p>
@@ -692,7 +882,7 @@
               si cometes un error.
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="deshacer-confirmacion">
             <div class="head-subtitle">
               <h3 class="subtitle">Deshacer una confirmación</h3>
               <span class="numero-pagina">pg:45</span>
@@ -724,7 +914,7 @@
               confirmación anterior
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="deshacer-conf-add">
             <div class="head-subtitle">
               <h3>
                 Deshacer una confirmacion y preparar nuevos archivos para la
@@ -759,7 +949,7 @@
               </li>
             </ul>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="deshacer-preparado">
             <div class="head-subtitle">
               <h3>Deshacer un Archivo Preparado</h3>
               <span class="numero-pagina">pg:46</span>
@@ -781,7 +971,7 @@
               Permite sacar del area de preparación al archivo.
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="deshacer-modificado">
             <div class="head-subtitle">
               <h3 class="subtitle">Deshacer un Archivo Modificado</h3>
               <span class="numero-pagina">pag: 47</span>
@@ -807,7 +997,7 @@
             </p>
           </div>
         </div>
-        <div class="row">
+        <div class="row" id="remoto">
           <div class="row__item">
             <h2 class="subtitle">Trabajar con Remotos</h2>
             <p>
@@ -821,7 +1011,7 @@
               permisos de solo lectura o de lectura y escritura.
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="remoto-ver">
             <div class="head-subtitle">
               <h3 class="subtitle">Ver tus remotos</h3>
               <span class="numero-pagina">pg:48</span>
@@ -844,7 +1034,7 @@
               y que serán usadas al leer y escribir en ese remoto:
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="remoto-add">
             <div class="head-subtitle">
               <h3 class="subtitle">Añadir remotos</h3>
               <span class="numero-pagina">pg: 49</span>
@@ -869,7 +1059,7 @@
               <span class="comando">orgin</span>
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="remoto-traer">
             <div class="head-subtitle">
               <h3 class="subtitle">Traer y Combinar Remotos</h3>
               <span class="numero-pagina">pg:50</span>
@@ -902,7 +1092,7 @@
               master
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="remoto-inspeccionar">
             <div class="head-subtitle">
               <h3 class="subtitle">Inspeccionar un remoto</h3>
               <span class="numero-pagina">pg: 51</span>
@@ -917,7 +1107,7 @@
               de ramas
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="remoto-eliminar">
             <div class="head-subtitle">
               <h3>Eliminar y Renombrar Remotos</h3>
               <span class="numero-pagina">pg:52</span>
@@ -941,7 +1131,7 @@
             </p>
           </div>
         </div>
-        <div class="row">
+        <div class="row" id="etiquetado">
           <div class="row__item">
             <h2 class="subtitle">Etiquetado</h2>
             <p>
@@ -971,7 +1161,7 @@
               <span class="resaltado"></span>
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="etiquetado-listar">
             <div class="head-subtitle">
               <h3>Listar etiquetas</h3>
               <span class="numero-pagina">pg:53</span>
@@ -982,7 +1172,7 @@
               importancia.
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="etiquetado-busqueda">
             <div class="head-subtitle">
               <h3>Listar etiquetas con un patrón de busqueda</h3>
               <span class="numero-pagina">pg:53</span>
@@ -993,7 +1183,7 @@
               busqueda.
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="etiquetado-crear">
             <div class="head-subtitle">
               <h3>Crear etiquetas</h3>
               <span class="numero-pagina">pg:53</span>
@@ -1027,7 +1217,7 @@
               </li>
             </ul>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="etiquetado-ver-informacion">
             <div class="head-subtitle">
               <h3>Ver información de la etiqueta</h3>
               <span class="numero-pagina">pg:54</span>
@@ -1038,7 +1228,7 @@
               <span class="resaltado">con el commit que está etiquetado.</span>
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="etiquetado-tardio">
             <div class="head-subtitle">
               <h3>Etiquetado Tardío</h3>
               <span class="numero-pagina">pg:55</span>
@@ -1052,10 +1242,11 @@
                 >git tag -a v1.02
                 <span class="resaltado">594545gfg</span> </span
               >: Como ultimo parametro del comando especificamos el
-              <span class="resaltado"> checksum</span> del commit a etiquetar.
+              <span class="resaltado"> checksum (o parte de él)</span> del
+              commit a etiquetar.
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="etiquetado-compartir">
             <div class="head-subtitle">
               <h3>Compartir Etiquetas</h3>
               <span class="numero-pagina">pg:56</span>
@@ -1075,7 +1266,7 @@
             </p>
           </div>
         </div>
-        <div class="row">
+        <div class="row" id="ramificacion">
           <div class="row__item">
             <h2 class="subtitle">Ramificacion</h2>
             <p>
@@ -1095,7 +1286,7 @@
               rama irá avanzando automáticamente.
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="ramificacion-add">
             <div class="head-subtitle">
               <h3 class="subtitle">Crear un nueva rama</h3>
               <span class="numero-pagina">pg:61</span>
@@ -1112,7 +1303,7 @@
               apuntador a la misma confirmacion donde estés actualmte
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="ramificacion-head">
             <div class="head-subtitle">
               <h3 class="subtitle">
                 Apuntador especial denominado
@@ -1128,7 +1319,7 @@
               >
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="ramificacion-cambiar">
             <div class="head-subtitle">
               <h3 class="subtitle">Cambiar de Rama</h3>
               <span class="numero-pagina">pg:63</span>
@@ -1154,7 +1345,7 @@
               y despejado antes de saltar entre ramas
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="ramificacion-fusionar">
             <div class="head-subtitle">
               <h3 class="subtitle">Fusionar ramas</h3>
               <span class="numero-pagina">pg:69</span>
@@ -1170,7 +1361,7 @@
               mismo sitio que la rama <span class="comando">develop</span>.
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="ramificacion-eliminar">
             <div class="head-subtitle">
               <h3 class="subtitle">Eliminar ramas</h3>
               <span class="numero-pagina">pg:70</span>
@@ -1186,27 +1377,30 @@
               develop
             </p>
           </div>
-          <div class="row__item">
+          <div class="row__item" id="ramificacion-problemas">
             <div class="head-subtitle">
               <h3>Principales Conflictos que Pueden Surgir en las Fusiones</h3>
               <span class="numero-pagina">pg:72</span>
             </div>
+            <p>
+              <span class="comando">git merge --abort</span>: Permite cancelar
+              la fusion.
+            </p>
+            <p>
+              <span class="comando">git branch --merged</span>: Permite ver
+              <span class="resaltado">las ramas fusionadas</span> con la rama
+              actual.
+            </p>
+            <p>
+              <span class="comando">git branch --no-merged</span>: Permite ver
+              <span class="resaltado">las ramas NO fusionadas</span> con la rama
+              actual.
+            </p>
           </div>
-          <p>
-            <span class="comando">git merge --abort</span>: Permite cancelar la
-            fusion.
-          </p>
-          <p>
-            <span class="comando">git branch --merged</span>: Permite ver
-            <span class="resaltado">las ramas fusionadas</span> con la rama
-            actual.
-          </p>
-          <p>
-            <span class="comando">git branch --no-merged</span>: Permite ver
-            <span class="resaltado">las ramas NO fusionadas</span> con la rama
-            actual.
-          </p>
         </div>
+      </div>
+      <div class="arrow">
+        <a href="#contenidos">^</a>
       </div>
     </div>
   </body>
