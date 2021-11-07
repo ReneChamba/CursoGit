@@ -178,6 +178,7 @@
                 <a href="#ramificacion">Ramificacion</a>
                 <ul class="lista">
                   <li><a href="#ramificacion-add">Crear un nueva rama</a></li>
+                  <li><a href="#ramificacion-listar">Listar rama</a></li>
                   <li>
                     <a href="#ramificacion-head"
                       >Apuntador especial denominado HEAD</a
@@ -185,6 +186,11 @@
                   </li>
                   <li><a href="#ramificacion-cambiar">Cambiar de Rama</a></li>
                   <li><a href="#ramificacion-fusionar">Fusionar ramas</a></li>
+                  <li>
+                    <a href="#ramificacion-tres-bandas"
+                      >Fusionar ramas, concepto a tres bandas</a
+                    >
+                  </li>
                   <li><a href="#ramificacion-eliminar">Eliminar ramas</a></li>
                   <li>
                     <a href="#ramificacion-problemas"
@@ -1286,6 +1292,17 @@
               rama irá avanzando automáticamente.
             </p>
           </div>
+          <div class="row__item" id="ramificacion-listar">
+            <div class="head-subtitle">
+              <h3 class="subtitle">Listar Ramas</h3>
+              <span></span>
+            </div>
+            <p><span class="comando">git branch</span></p>
+            <p>
+              <span class="comando">git branch -v</span>: Lista la ultima
+              confirmacion de cambios de cada rama
+            </p>
+          </div>
           <div class="row__item" id="ramificacion-add">
             <div class="head-subtitle">
               <h3 class="subtitle">Crear un nueva rama</h3>
@@ -1359,6 +1376,18 @@
               <span class="comando">git merge develop</span>: Tras la fusión
               (merge), la rama <span class="comando">master</span> apunta al
               mismo sitio que la rama <span class="comando">develop</span>.
+            </p>
+          </div>
+          <div class="row__item" id="ramificacion-tres-bandas">
+            <div class="head-subtitle">
+              <h3 class="subtitle">Concepto fusión a tres bandas</h3>
+              <span class="numero-pagina">pg:71</span>
+            </div>
+            <p>
+              Cuando la confirmacion actual no es el ancestro directo de la rama
+              que deseamos fusionar, Git utiliza este concepto.Crear una nueva
+              instantanea automaticamente resultado de unir las instanteas de
+              los extremos de cada rama y por el ancestro común de ambas
             </p>
           </div>
           <div class="row__item" id="ramificacion-eliminar">
