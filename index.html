@@ -1437,6 +1437,75 @@
             </p>
           </div>
         </div>
+        <div class="row" id="ramas-remotas">
+          <div class="row__item">
+            <h2 class="subtitle">Ramas remotas</h2>
+            <p>
+              Son ramas locales que referencian al estado de la ramas de nuestro
+              servidor remoto. Estas ramas no se pueden mover, y solo se
+              actualizan cuando se tiene contacto con la red.
+            </p>
+            <p>
+              Se suelen referenciar como
+              <span class="comando">remoto/rama</span> : nos permita ver el
+              estado de la rama remota.
+            </p>
+          </div>
+          <div class="row__item">
+            <div class="head-subtitle">
+              <h3 class="subtitle">Sincronizar rama remota con el servidor</h3>
+              <span class="numero-pagina">pg:83</span>
+            </div>
+            <p>
+              <span class="comando">git fetch origin</span> : Actualiza
+              cualquier datos que la rama remota no tenga, y mueve la rama para
+              que apunte a la posicion mas reciente.
+            </p>
+          </div>
+          <div class="row__item">
+            <div class="head-subtitle">
+              <h3 class="subtitle">Publicar ramas</h3>
+              <span class="numero-pagina">pg:86</span>
+            </div>
+            <p>
+              <span class="comando">git push origin develop</span> : Lleva la
+              develop al remoto, siempre y cuando tenga permisos de escritura.
+            </p>
+            <p>
+              <span class="comando">git push origin develop:develop</span> : Es
+              otra manera de llevar la rama develop al remoto, siempre y cuando
+              tenga permisos de escritura, pero esta sintaxis permite nombrar a
+              la rama remoto con un nombre diferente, ejemplo
+              <span class="comando">git push origin develop:desarrollo</span>:
+              lleva la rama local develop al remoto con el nombre desarrollo
+            </p>
+          </div>
+          <div class="row__item">
+            <div class="head-subtitle">
+              <h3 class="subtitle">Crear ramas a partir de ramas remotas</h3>
+              <span class="numero-pagina">pg:87-88</span>
+            </div>
+            <p>
+              <span class="comando">git branch develop origin/develop</span>
+              :Crea la rama develop a partir del estado de una rama remota
+              develop y hara seguimiento a dicha rama.
+            </p>
+            <p>
+              <span class="comando">git branch --track origin/develop</span>
+              :Es equivalente al comando anterior, simplemente que el
+              <span class="resaltado"
+                >parametro <span class="comando">--track</span></span
+              >
+              nombrara a la nueva rama con el mismo nombre que la rama remota.
+            </p>
+            <p>
+              <span class="comando">git merge remote/rama</span> : Integrar
+              cambios de una rama remota a la rama actual, previamente es
+              necesario actualizar la rama remota haciendo
+              <span class="comando">git fetch origin</span>
+            </p>
+          </div>
+        </div>
       </div>
       <div class="arrow">
         <a href="#contenidos">^</a>
